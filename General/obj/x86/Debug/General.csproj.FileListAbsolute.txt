@@ -1,0 +1,15 @@
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\General.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\General.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.GUI.RolesEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.GUI.RolesGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.Properties.Resources.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.csproj.GenerateResource.Cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\x86\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\x86\Debug\General.GUI.PermisosEdicion.resources

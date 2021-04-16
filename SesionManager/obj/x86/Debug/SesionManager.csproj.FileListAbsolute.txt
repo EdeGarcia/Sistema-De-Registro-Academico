@@ -1,0 +1,10 @@
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\SesionManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\SesionManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\x86\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\x86\Debug\SesionManager.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\x86\Debug\SesionManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\x86\Debug\SesionManager.pdb

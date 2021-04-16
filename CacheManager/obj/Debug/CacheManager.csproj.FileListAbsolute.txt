@@ -1,0 +1,16 @@
+E:\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\CacheManager.dll
+E:\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\CacheManager.pdb
+E:\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\DataManager.dll
+E:\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\MySql.Data.dll
+E:\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\DataManager.pdb
+E:\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+E:\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.dll
+E:\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\bin\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\CacheManager\obj\Debug\CacheManager.pdb
