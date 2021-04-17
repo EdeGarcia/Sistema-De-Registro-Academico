@@ -36,12 +36,12 @@
             this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.permisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.gestionarGradosYSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarGradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +94,28 @@
             this.permisosToolStripMenuItem.Text = "Permisos";
             this.permisosToolStripMenuItem.Click += new System.EventHandler(this.permisosToolStripMenuItem_Click);
             // 
+            // gestionarGradosYSeccionesToolStripMenuItem
+            // 
+            this.gestionarGradosYSeccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionarGradosToolStripMenuItem,
+            this.gestionarSeccionesToolStripMenuItem});
+            this.gestionarGradosYSeccionesToolStripMenuItem.Name = "gestionarGradosYSeccionesToolStripMenuItem";
+            this.gestionarGradosYSeccionesToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.gestionarGradosYSeccionesToolStripMenuItem.Text = "Grados y secciones";
+            // 
+            // gestionarGradosToolStripMenuItem
+            // 
+            this.gestionarGradosToolStripMenuItem.Name = "gestionarGradosToolStripMenuItem";
+            this.gestionarGradosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.gestionarGradosToolStripMenuItem.Text = "Gestionar grados";
+            this.gestionarGradosToolStripMenuItem.Click += new System.EventHandler(this.gestionarGradosToolStripMenuItem_Click);
+            // 
+            // gestionarSeccionesToolStripMenuItem
+            // 
+            this.gestionarSeccionesToolStripMenuItem.Name = "gestionarSeccionesToolStripMenuItem";
+            this.gestionarSeccionesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.gestionarSeccionesToolStripMenuItem.Text = "Gestionar secciones";
+            // 
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
@@ -117,27 +139,6 @@
             this.toolStrip.Size = new System.Drawing.Size(795, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
-            // 
-            // gestionarGradosYSeccionesToolStripMenuItem
-            // 
-            this.gestionarGradosYSeccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionarGradosToolStripMenuItem,
-            this.gestionarSeccionesToolStripMenuItem});
-            this.gestionarGradosYSeccionesToolStripMenuItem.Name = "gestionarGradosYSeccionesToolStripMenuItem";
-            this.gestionarGradosYSeccionesToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
-            this.gestionarGradosYSeccionesToolStripMenuItem.Text = "Grados y secciones";
-            // 
-            // gestionarGradosToolStripMenuItem
-            // 
-            this.gestionarGradosToolStripMenuItem.Name = "gestionarGradosToolStripMenuItem";
-            this.gestionarGradosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.gestionarGradosToolStripMenuItem.Text = "Gestionar grados";
-            // 
-            // gestionarSeccionesToolStripMenuItem
-            // 
-            this.gestionarSeccionesToolStripMenuItem.Name = "gestionarSeccionesToolStripMenuItem";
-            this.gestionarSeccionesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.gestionarSeccionesToolStripMenuItem.Text = "Gestionar secciones";
             // 
             // Principal
             // 

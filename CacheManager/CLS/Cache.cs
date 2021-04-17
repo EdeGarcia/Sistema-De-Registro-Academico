@@ -27,6 +27,24 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODOS_LOS_GRADOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDGrado, Descripcion FROM Grados ORDER BY Descripcion;";
+
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
         public static DataTable PERMISOS_DE_UN_ROL(String pIDRol)
         {
             DataTable Resultados = new DataTable();

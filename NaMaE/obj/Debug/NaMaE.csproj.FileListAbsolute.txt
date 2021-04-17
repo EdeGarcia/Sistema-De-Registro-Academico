@@ -18,3 +18,5 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\obj\Debug\NaM
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\obj\Debug\NaMaE.csproj.GenerateResource.Cache
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\obj\Debug\NaMaE.exe
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\obj\Debug\NaMaE.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\GradosYSecciones.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\GradosYSecciones.pdb

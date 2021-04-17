@@ -131,6 +131,10 @@
       <Project>{bbf35e0c-0ffd-475a-a220-ae86b3dbf3fe}</Project>
       <Name>General</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GradosYSecciones\GradosYSecciones.csproj">
+      <Project>{1f5d9336-9b89-4cd3-adc5-20717ce5f4ee}</Project>
+      <Name>GradosYSecciones</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SesionManager\SesionManager.csproj">
       <Project>{29dfba17-aa88-4742-837e-df6327f86886}</Project>
       <Name>SesionManager</Name>

@@ -1,0 +1,14 @@
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\GradosYSecciones.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\GradosYSecciones.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\bin\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.GradosEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.GradosGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.Properties.Resources.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.csproj.GenerateResource.Cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.pdb
