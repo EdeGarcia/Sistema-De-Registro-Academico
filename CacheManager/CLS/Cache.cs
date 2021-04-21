@@ -9,11 +9,12 @@ namespace CacheManager.CLS
 {
     public static class Cache
     {
-        public static DataTable TODOS_LOS_ROLES()
+        //Metodos del sistema NAMAE
+        public static DataTable TODOS_LOS_GRADOS()
         {
             DataTable Resultados = new DataTable();
             DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
-            String Consulta = @"SELECT IDRol, Rol FROM Roles ORDER BY Rol;";
+            String Consulta = @"SELECT IDGrado, Descripcion FROM Grados ORDER BY Descripcion;";
 
             try
             {
@@ -27,11 +28,32 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
-        public static DataTable TODOS_LOS_GRADOS()
+        public static DataTable TODAS_LAS_SECCIONES()
         {
             DataTable Resultados = new DataTable();
             DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
-            String Consulta = @"SELECT IDGrado, Descripcion FROM Grados ORDER BY Descripcion;";
+            String Consulta = @"SELECT a.IDSeccion AS ID,b.Descripcion AS Grado, a.Descripcion AS Seccion, a.Cupo, a.Turno, a.Aula
+                               FROM secciones a, grados b 
+                               WHERE a.IDGrado = b.IDGrado 
+                               ORDER BY Grado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        //
+        public static DataTable TODOS_LOS_ROLES()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDRol, Rol FROM Roles ORDER BY Rol;";
 
             try
             {

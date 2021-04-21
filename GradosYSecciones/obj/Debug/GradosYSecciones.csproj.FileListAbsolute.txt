@@ -12,3 +12,5 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\ob
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.csproj.GenerateResource.Cache
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.dll
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.SeccionesGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.SeccionesEdicion.resources

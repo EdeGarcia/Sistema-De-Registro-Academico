@@ -10,52 +10,38 @@ using System.Windows.Forms;
 
 namespace GradosYSecciones.GUI
 {
-    public partial class GradosGestion : Form
+    public partial class SeccionesGestion : Form
     {
         BindingSource _DATOS = new BindingSource();
 
         private void Cargar()
         {
-            _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_GRADOS();
+            _DATOS.DataSource = CacheManager.CLS.Cache.TODAS_LAS_SECCIONES();
             FiltrarLocalmente();
         }
 
         private void FiltrarLocalmente()
         {
-            if(txbFiltrar.TextLength > 0)
+            if (txbFiltrar.TextLength > 0)
             {
-                _DATOS.Filter = "Descripcion LIKE '%" + txbFiltrar + "%'";
+                _DATOS.Filter = "Grado LIKE '%" + txbFiltrar + "%'";
             }
             else
             {
                 _DATOS.RemoveFilter();
             }
 
-            dtgGrados.AutoGenerateColumns = false;
-            dtgGrados.DataSource = _DATOS;
-            lblRegistros.Text = dtgGrados.Rows.Count.ToString() + " Registros Encontrados";
+            dtgSecciones.AutoGenerateColumns = false;
+            dtgSecciones.DataSource = _DATOS;
+            lblRegistros.Text = dtgSecciones.Rows.Count.ToString() + " Registros Encontrados";
         }
 
-        public GradosGestion()
+        public SeccionesGestion()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                GradosEdicion f = new GradosEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
-
-            }
-        }
-
-        private void GradosGestion_Load(object sender, EventArgs e)
+        private void SeccionesGestion_Load(object sender, EventArgs e)
         {
             Cargar();
         }
@@ -65,15 +51,33 @@ namespace GradosYSecciones.GUI
             FiltrarLocalmente();
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SeccionesEdicion f = new SeccionesEdicion();
+                f.ShowDialog();
+                Cargar();
+            }
+            catch
+            {
+
+            }
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    GradosEdicion f = new GradosEdicion();
-                    f.txbIDGrado.Text = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
-                    f.txbDescripcion.Text = dtgGrados.CurrentRow.Cells["Descripcion"].Value.ToString();
+                    SeccionesEdicion f = new SeccionesEdicion();
+                    f.txbIDSeccion.Text = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
+                    f.txbDescripcion.Text = dtgSecciones.CurrentRow.Cells["Seccion"].Value.ToString();
+                    f.txbTurno.Text = dtgSecciones.CurrentRow.Cells["Turno"].Value.ToString();
+                    f.txbAula.Text = dtgSecciones.CurrentRow.Cells["Aula"].Value.ToString();
+                    f.txbCupo.Text = dtgSecciones.CurrentRow.Cells["Cupo"].Value.ToString();
+                    //f.cbbGrados.DisplayMember = dtgSecciones.CurrentRow.Cells["Grado"].Value.ToString();
                     f.ShowDialog();
                     Cargar();
                 }
@@ -90,8 +94,8 @@ namespace GradosYSecciones.GUI
             {
                 if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CLS.Grados oEntidad = new CLS.Grados();
-                    oEntidad.IDGrado = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
+                    CLS.Secciones oEntidad = new CLS.Secciones();
+                    oEntidad.IDSeccion = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
 
                     if (oEntidad.Eliminar())
                     {

@@ -58,5 +58,19 @@ namespace NaMaE.GUI
 
             }
         }
+
+        private void gestionarSeccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GradosYSecciones.GUI.SeccionesGestion f = new GradosYSecciones.GUI.SeccionesGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

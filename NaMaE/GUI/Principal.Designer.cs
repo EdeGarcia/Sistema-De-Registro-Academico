@@ -115,6 +115,7 @@
             this.gestionarSeccionesToolStripMenuItem.Name = "gestionarSeccionesToolStripMenuItem";
             this.gestionarSeccionesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.gestionarSeccionesToolStripMenuItem.Text = "Gestionar secciones";
+            this.gestionarSeccionesToolStripMenuItem.Click += new System.EventHandler(this.gestionarSeccionesToolStripMenuItem_Click);
             // 
             // toolStripStatusLabel
             // 
