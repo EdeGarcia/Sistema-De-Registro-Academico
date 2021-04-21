@@ -13,3 +13,5 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\Debug\M
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\Debug\CacheManager.pdb
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\Debug\DataManager.pdb
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.PermisosEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosEdicion.resources

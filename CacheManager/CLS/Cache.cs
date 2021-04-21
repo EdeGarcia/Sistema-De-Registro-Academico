@@ -48,6 +48,24 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODOS_LOS_EMPLEADOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDEmpleado, Nombres, Apellidos, FechaNacimiento, Sexo, Telefono, DUI, NIT, Titulo FROM Empleados;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+
         //
         public static DataTable TODOS_LOS_ROLES()
         {

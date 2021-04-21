@@ -47,7 +47,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(194, 176);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(82, 38);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(292, 176);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(82, 38);
-            this.btnCerrar.TabIndex = 1;
+            this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             this.txbIDRol.Name = "txbIDRol";
             this.txbIDRol.ReadOnly = true;
             this.txbIDRol.Size = new System.Drawing.Size(98, 23);
-            this.txbIDRol.TabIndex = 3;
+            this.txbIDRol.TabIndex = 0;
             // 
             // label2
             // 
@@ -101,7 +101,7 @@
             this.txbRol.Location = new System.Drawing.Point(28, 113);
             this.txbRol.Name = "txbRol";
             this.txbRol.Size = new System.Drawing.Size(346, 23);
-            this.txbRol.TabIndex = 5;
+            this.txbRol.TabIndex = 1;
             // 
             // Notificador
             // 

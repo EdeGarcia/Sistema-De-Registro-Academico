@@ -73,6 +73,7 @@
             this.gestiónDeEmpleadosToolStripMenuItem.Name = "gestiónDeEmpleadosToolStripMenuItem";
             this.gestiónDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.gestiónDeEmpleadosToolStripMenuItem.Text = "Gestión de empleados";
+            this.gestiónDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeEmpleadosToolStripMenuItem_Click);
             // 
             // gestiónDeUsuariosToolStripMenuItem
             // 

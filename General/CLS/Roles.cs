@@ -60,7 +60,6 @@ namespace General.CLS
 
             return Resultado;
         }
-
         public Boolean Editar()
         {
             Boolean Resultado = false;
@@ -85,7 +84,6 @@ namespace General.CLS
 
             return Resultado;
         }
-
         public Boolean Eliminar()
         {
             Boolean Resultado = false;

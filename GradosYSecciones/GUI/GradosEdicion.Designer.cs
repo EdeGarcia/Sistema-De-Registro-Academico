@@ -67,7 +67,7 @@
             this.txbIDGrado.Name = "txbIDGrado";
             this.txbIDGrado.ReadOnly = true;
             this.txbIDGrado.Size = new System.Drawing.Size(97, 23);
-            this.txbIDGrado.TabIndex = 2;
+            this.txbIDGrado.TabIndex = 0;
             // 
             // txbDescripcion
             // 
@@ -75,7 +75,7 @@
             this.txbDescripcion.Location = new System.Drawing.Point(24, 110);
             this.txbDescripcion.Name = "txbDescripcion";
             this.txbDescripcion.Size = new System.Drawing.Size(351, 23);
-            this.txbDescripcion.TabIndex = 3;
+            this.txbDescripcion.TabIndex = 0;
             // 
             // btnGuardar
             // 
@@ -84,7 +84,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(198, 171);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(82, 38);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -97,7 +97,7 @@
             this.btnCerrar.Location = new System.Drawing.Point(293, 171);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(82, 38);
-            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
