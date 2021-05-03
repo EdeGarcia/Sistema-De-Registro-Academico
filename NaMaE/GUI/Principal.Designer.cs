@@ -39,7 +39,10 @@
             this.gestionarGradosYSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarGradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.responsablesYEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeResponsablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.menuStrip.SuspendLayout();
@@ -50,7 +53,8 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generalToolStripMenuItem,
-            this.gestionarGradosYSeccionesToolStripMenuItem});
+            this.gestionarGradosYSeccionesToolStripMenuItem,
+            this.responsablesYEstudiantesToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(795, 24);
@@ -118,16 +122,39 @@
             this.gestionarSeccionesToolStripMenuItem.Text = "Gestionar secciones";
             this.gestionarSeccionesToolStripMenuItem.Click += new System.EventHandler(this.gestionarSeccionesToolStripMenuItem_Click);
             // 
-            // toolStripStatusLabel
+            // responsablesYEstudiantesToolStripMenuItem
             // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Estado";
+            this.responsablesYEstudiantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestiónDeResponsablesToolStripMenuItem,
+            this.gestiónDeEstudiantesToolStripMenuItem});
+            this.responsablesYEstudiantesToolStripMenuItem.Name = "responsablesYEstudiantesToolStripMenuItem";
+            this.responsablesYEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(162, 20);
+            this.responsablesYEstudiantesToolStripMenuItem.Text = "Responsables y estudiantes";
+            // 
+            // gestiónDeResponsablesToolStripMenuItem
+            // 
+            this.gestiónDeResponsablesToolStripMenuItem.Name = "gestiónDeResponsablesToolStripMenuItem";
+            this.gestiónDeResponsablesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.gestiónDeResponsablesToolStripMenuItem.Text = "Gestión de responsables";
+            this.gestiónDeResponsablesToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeResponsablesToolStripMenuItem_Click);
+            // 
+            // gestiónDeEstudiantesToolStripMenuItem
+            // 
+            this.gestiónDeEstudiantesToolStripMenuItem.Name = "gestiónDeEstudiantesToolStripMenuItem";
+            this.gestiónDeEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.gestiónDeEstudiantesToolStripMenuItem.Text = "Gestión de estudiantes";
+            this.gestiónDeEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeEstudiantesToolStripMenuItem_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(42, 17);
+            this.lblUsuario.Text = "Estado";
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
+            this.lblUsuario});
             this.statusStrip.Location = new System.Drawing.Point(0, 463);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(795, 22);
@@ -154,6 +181,7 @@
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Principal";
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -165,7 +193,7 @@
         #endregion
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel lblUsuario;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
@@ -176,6 +204,9 @@
         private System.Windows.Forms.ToolStripMenuItem gestionarGradosYSeccionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarGradosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionarSeccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem responsablesYEstudiantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeResponsablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeEstudiantesToolStripMenuItem;
     }
 }
 

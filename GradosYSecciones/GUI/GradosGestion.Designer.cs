@@ -171,6 +171,7 @@
             this.dtgGrados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgGrados.Size = new System.Drawing.Size(610, 418);
             this.dtgGrados.TabIndex = 2;
+            
             // 
             // IDGrado
             // 

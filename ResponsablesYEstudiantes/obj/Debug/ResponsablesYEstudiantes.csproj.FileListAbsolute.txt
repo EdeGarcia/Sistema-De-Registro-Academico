@@ -1,0 +1,17 @@
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\ResponsablesYEstudiantes.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\ResponsablesYEstudiantes.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.GUI.ResponsablesGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.Properties.Resources.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.csproj.GenerateResource.Cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\bin\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.GUI.ResponsablesEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.GUI.EstudiantesGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.GUI.EstudiantesEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\ResponsablesYEstudiantes\obj\Debug\ResponsablesYEstudiantes.GUI.ResponsablesListado.resources

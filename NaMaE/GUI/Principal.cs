@@ -12,6 +12,8 @@ namespace NaMaE.GUI
 {
     public partial class Principal : Form
     {
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         public Principal()
         {
             InitializeComponent();
@@ -78,6 +80,39 @@ namespace NaMaE.GUI
             try
             {
                 General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            lblUsuario.Text = oSesion.Usuario;
+        }
+
+        private void gestiónDeResponsablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ResponsablesYEstudiantes.GUI.ResponsablesGestion f = new ResponsablesYEstudiantes.GUI.ResponsablesGestion();    
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void gestiónDeEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ResponsablesYEstudiantes.GUI.EstudiantesGestion f = new ResponsablesYEstudiantes.GUI.EstudiantesGestion();
                 f.MdiParent = this;
                 f.Show();
             }

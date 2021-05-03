@@ -65,8 +65,99 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODOS_LOS_RESPONSABLES()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDResponsable, Nombres, Apellidos, FechaNacimiento, Sexo, TipoDeParentesco, DUI, NIT, Telefono FROM responsables;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable TODOS_LOS_ESTUDIANTES()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT a.IDEstudiante, a.Nombres, a.Apellidos, a.Direccion, a.FechaNacimiento, a.Sexo, a.NIE, CONCAT(b.Nombres, ' ', b.Apellidos) AS Responsable, a.IDResponsable
+                               FROM estudiantes a, responsables b
+                               WHERE a.IDResponsable = b.IDResponsable;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable LISTADO_RESPONSABLES()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDResponsable, Nombres, Apellidos, DUI
+                                FROM responsables ORDER BY Apellidos;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable DATOS_DE_UN_RESPONSABLE(String pIDResponsable)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDResponsable, Nombres, Apellidos FROM responsables WHERE IDResponsable = '"+pIDResponsable+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
 
         //
+        public static DataTable PERMISOS_DE_UN_USUARIO(String pIDRol)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT DISTINCT a.IDOpcion, b.Opcion
+                                FROM permisos a, opciones b
+                                WHERE a.IDOpcion = b.IDOpcion
+                                AND a.IDRol = "+pIDRol+";";
+
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
         public static DataTable TODOS_LOS_ROLES()
         {
             DataTable Resultados = new DataTable();
