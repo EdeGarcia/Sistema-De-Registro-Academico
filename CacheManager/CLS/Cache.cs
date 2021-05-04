@@ -136,6 +136,63 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODAS_LAS_MATERIAS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDMateria, Nombre, Descripcion FROM materias ORDER BY Nombre;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable MATERIAS_DE_UN_GRADO(String pIDGrado)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT c.IDMateria, c.Nombre, C.Descripcion, a.IDGrado_Materia
+                                FROM grados_materias a, grados b, materias c
+                                WHERE a.IDGrado = b.IDGrado AND a.IDMateria = c.IDMateria AND a.IDGrado = '"+pIDGrado+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable LISTADO_DE_MATERIAS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDMateria, Nombre FROM materias;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+
+
+
+
         //
         public static DataTable PERMISOS_DE_UN_USUARIO(String pIDRol)
         {

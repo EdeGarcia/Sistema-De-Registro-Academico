@@ -20,7 +20,7 @@ namespace ResponsablesYEstudiantes.GUI
             oEntidad.Apellidos = txbApellidos.Text;
             oEntidad.Direccion = txbDireccion.Text;
             oEntidad.FechaNacimiento = dtpFechaDeNacimiento.Text;
-            oEntidad.Sexo = txbSexo.Text;
+            oEntidad.Sexo = cbbSexo.Text;
             oEntidad.NIE = txbNie.Text;
             oEntidad.IDResponsable = txbIDResponsable.Text;
 
@@ -81,12 +81,6 @@ namespace ResponsablesYEstudiantes.GUI
             {
                 Resultado = false;
                 Notificador.SetError(txbDireccion, "Este campo no puede quedar vacío");
-            }
-
-            if (txbSexo.TextLength == 0)
-            {
-                Resultado = false;
-                Notificador.SetError(txbSexo, "Este campo no puede quedar vacío");
             }
 
             if(txbNie.TextLength == 0)

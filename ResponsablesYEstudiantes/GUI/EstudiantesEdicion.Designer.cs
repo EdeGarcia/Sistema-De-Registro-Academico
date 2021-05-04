@@ -34,7 +34,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txbNie = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txbSexo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpFechaDeNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -57,6 +56,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbbSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,10 +74,10 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.cbbSexo);
             this.splitContainer1.Panel1.Controls.Add(this.label8);
             this.splitContainer1.Panel1.Controls.Add(this.txbNie);
             this.splitContainer1.Panel1.Controls.Add(this.label7);
-            this.splitContainer1.Panel1.Controls.Add(this.txbSexo);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.dtpFechaDeNacimiento);
@@ -133,14 +133,6 @@
             this.label7.Size = new System.Drawing.Size(30, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "NIE";
-            // 
-            // txbSexo
-            // 
-            this.txbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSexo.Location = new System.Drawing.Point(11, 251);
-            this.txbSexo.Name = "txbSexo";
-            this.txbSexo.Size = new System.Drawing.Size(267, 23);
-            this.txbSexo.TabIndex = 11;
             // 
             // label6
             // 
@@ -353,6 +345,19 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // cbbSexo
+            // 
+            this.cbbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.FormattingEnabled = true;
+            this.cbbSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cbbSexo.Location = new System.Drawing.Point(11, 253);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(267, 25);
+            this.cbbSexo.TabIndex = 15;
+            // 
             // EstudiantesEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,10 +403,10 @@
         public System.Windows.Forms.TextBox txbNombres;
         public System.Windows.Forms.TextBox txbIDEstudiante;
         public System.Windows.Forms.TextBox txbNie;
-        public System.Windows.Forms.TextBox txbSexo;
         public System.Windows.Forms.TextBox txbApellidosR;
         public System.Windows.Forms.TextBox txbNombresR;
         public System.Windows.Forms.TextBox txbIDResponsable;
         private System.Windows.Forms.ErrorProvider Notificador;
+        public System.Windows.Forms.ComboBox cbbSexo;
     }
 }

@@ -76,7 +76,7 @@ namespace ResponsablesYEstudiantes.GUI
                     f.txbNombres.Text = dtgResponsables.CurrentRow.Cells["Nombres"].Value.ToString();
                     f.txbApellidos.Text = dtgResponsables.CurrentRow.Cells["Apellidos"].Value.ToString();
                     f.dtpFechaDeNacimiento.Text = dtgResponsables.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    f.txbSexo.Text = dtgResponsables.CurrentRow.Cells["Sexo"].Value.ToString();
+                    f.cbbSexo.Text = dtgResponsables.CurrentRow.Cells["Sexo"].Value.ToString();
                     f.txbTipoDeParentesco.Text = dtgResponsables.CurrentRow.Cells["TipoDeParentesco"].Value.ToString();
                     f.txbDui.Text = dtgResponsables.CurrentRow.Cells["DUI"].Value.ToString();
                     f.txbNit.Text = dtgResponsables.CurrentRow.Cells["NIT"].Value.ToString();

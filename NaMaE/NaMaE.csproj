@@ -135,6 +135,10 @@
       <Project>{1f5d9336-9b89-4cd3-adc5-20717ce5f4ee}</Project>
       <Name>GradosYSecciones</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Materias\Materias.csproj">
+      <Project>{03446edd-5ac6-410e-aae2-37574580e300}</Project>
+      <Name>Materias</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResponsablesYEstudiantes\ResponsablesYEstudiantes.csproj">
       <Project>{71c822a6-4043-4b80-b4c6-c3a4d0d742fb}</Project>
       <Name>ResponsablesYEstudiantes</Name>
@@ -145,6 +149,10 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

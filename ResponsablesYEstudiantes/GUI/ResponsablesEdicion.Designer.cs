@@ -38,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaDeNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.txbSexo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbTipoDeParentesco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbbSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,14 +128,6 @@
             this.label4.Size = new System.Drawing.Size(133, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fecha de nacimiento";
-            // 
-            // txbSexo
-            // 
-            this.txbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSexo.Location = new System.Drawing.Point(304, 173);
-            this.txbSexo.Name = "txbSexo";
-            this.txbSexo.Size = new System.Drawing.Size(253, 23);
-            this.txbSexo.TabIndex = 9;
             // 
             // label5
             // 
@@ -249,12 +241,26 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // cbbSexo
+            // 
+            this.cbbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.FormattingEnabled = true;
+            this.cbbSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cbbSexo.Location = new System.Drawing.Point(304, 176);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(253, 25);
+            this.cbbSexo.TabIndex = 20;
+            // 
             // ResponsablesEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(574, 423);
+            this.Controls.Add(this.cbbSexo);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txbTelefono);
@@ -265,7 +271,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbTipoDeParentesco);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txbSexo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpFechaDeNacimiento);
@@ -303,10 +308,10 @@
         public System.Windows.Forms.TextBox txbNombres;
         public System.Windows.Forms.TextBox txbApellidos;
         public System.Windows.Forms.DateTimePicker dtpFechaDeNacimiento;
-        public System.Windows.Forms.TextBox txbSexo;
         public System.Windows.Forms.TextBox txbTipoDeParentesco;
         public System.Windows.Forms.TextBox txbDui;
         public System.Windows.Forms.TextBox txbNit;
         public System.Windows.Forms.TextBox txbTelefono;
+        public System.Windows.Forms.ComboBox cbbSexo;
     }
 }

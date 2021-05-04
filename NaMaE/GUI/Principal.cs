@@ -121,5 +121,34 @@ namespace NaMaE.GUI
 
             }
         }
+
+        private void gestiónDeMateriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Materias.GUI.MateriasGestion f = new Materias.GUI.MateriasGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        private void asignarMateriasAGradosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Materias.GUI.MateriasPorGradoGestion f = new Materias.GUI.MateriasPorGradoGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

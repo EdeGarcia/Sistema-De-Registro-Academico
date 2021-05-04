@@ -22,3 +22,5 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\Gra
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\GradosYSecciones.pdb
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\ResponsablesYEstudiantes.dll
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\ResponsablesYEstudiantes.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\Materias.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\NaMaE\bin\Debug\Materias.pdb

@@ -38,6 +38,7 @@ namespace General.GUI
                 cbbRoles.DataSource = Roles;
                 cbbRoles.DisplayMember = "Rol";
                 cbbRoles.ValueMember = "IDRol";
+                //
                 cbbRoles.SelectedIndex = 1;
 
             }

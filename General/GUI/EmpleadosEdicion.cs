@@ -19,7 +19,7 @@ namespace General.GUI
             oEntidad.Nombres = txbNombres.Text;
             oEntidad.Apellidos = txbApellidos.Text;
             oEntidad.FechaNacimiento = dtpFechaNacimiento.Text;
-            oEntidad.Sexo = txbSexo.Text;
+            oEntidad.Sexo = cbbSexo.Text;
             oEntidad.Telefono = txbTelefono.Text;
             oEntidad.DUI = txbDui.Text;
             oEntidad.NIT = txbNit.Text;
@@ -78,12 +78,6 @@ namespace General.GUI
             {
                 Resultado = false;
                 Notificador.SetError(txbApellidos, "Este campo no puede quedar vacío");
-            }
-
-            if(txbSexo.TextLength == 0)
-            {
-                Resultado = false;
-                Notificador.SetError(txbSexo, "Este campo no puede quedar vacío");
             }
 
             if (txbTelefono.TextLength == 0)

@@ -42,6 +42,9 @@
             this.responsablesYEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeResponsablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeMateriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarMateriasAGradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -54,7 +57,8 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generalToolStripMenuItem,
             this.gestionarGradosYSeccionesToolStripMenuItem,
-            this.responsablesYEstudiantesToolStripMenuItem});
+            this.responsablesYEstudiantesToolStripMenuItem,
+            this.materiasToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(795, 24);
@@ -145,6 +149,29 @@
             this.gestiónDeEstudiantesToolStripMenuItem.Text = "Gestión de estudiantes";
             this.gestiónDeEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeEstudiantesToolStripMenuItem_Click);
             // 
+            // materiasToolStripMenuItem
+            // 
+            this.materiasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestiónDeMateriasToolStripMenuItem,
+            this.asignarMateriasAGradosToolStripMenuItem});
+            this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.materiasToolStripMenuItem.Text = "Materias";
+            // 
+            // gestiónDeMateriasToolStripMenuItem
+            // 
+            this.gestiónDeMateriasToolStripMenuItem.Name = "gestiónDeMateriasToolStripMenuItem";
+            this.gestiónDeMateriasToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.gestiónDeMateriasToolStripMenuItem.Text = "Gestión de materias";
+            this.gestiónDeMateriasToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeMateriasToolStripMenuItem_Click);
+            // 
+            // asignarMateriasAGradosToolStripMenuItem
+            // 
+            this.asignarMateriasAGradosToolStripMenuItem.Name = "asignarMateriasAGradosToolStripMenuItem";
+            this.asignarMateriasAGradosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.asignarMateriasAGradosToolStripMenuItem.Text = "Asignar materias a grados";
+            this.asignarMateriasAGradosToolStripMenuItem.Click += new System.EventHandler(this.asignarMateriasAGradosToolStripMenuItem_Click);
+            // 
             // lblUsuario
             // 
             this.lblUsuario.Name = "lblUsuario";
@@ -207,6 +234,9 @@
         private System.Windows.Forms.ToolStripMenuItem responsablesYEstudiantesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónDeResponsablesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónDeEstudiantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeMateriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarMateriasAGradosToolStripMenuItem;
     }
 }
 

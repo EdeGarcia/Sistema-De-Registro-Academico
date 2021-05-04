@@ -76,7 +76,7 @@ namespace General.GUI
                     f.txbNombres.Text = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString();
                     f.txbApellidos.Text = dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
                     f.dtpFechaNacimiento.Text = dtgEmpleados.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    f.txbSexo.Text = dtgEmpleados.CurrentRow.Cells["Sexo"].Value.ToString();
+                    f.cbbSexo.Text = dtgEmpleados.CurrentRow.Cells["Sexo"].Value.ToString();
                     f.txbTelefono.Text = dtgEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
                     f.txbDui.Text = dtgEmpleados.CurrentRow.Cells["DUI"].Value.ToString();
                     f.txbNit.Text = dtgEmpleados.CurrentRow.Cells["NIT"].Value.ToString();
