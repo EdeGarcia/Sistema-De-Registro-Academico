@@ -15,3 +15,6 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\bin\Debug\D
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.PermisosEdicion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosGestion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosListado.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.UsuariosEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.UsuariosGestion.resources

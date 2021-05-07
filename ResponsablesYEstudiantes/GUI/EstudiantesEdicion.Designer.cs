@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstudiantesEdicion));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.cbbSexo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbNie = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cbbSexo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -105,6 +105,19 @@
             this.splitContainer1.Size = new System.Drawing.Size(619, 563);
             this.splitContainer1.SplitterDistance = 291;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // cbbSexo
+            // 
+            this.cbbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSexo.FormattingEnabled = true;
+            this.cbbSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cbbSexo.Location = new System.Drawing.Point(11, 253);
+            this.cbbSexo.Name = "cbbSexo";
+            this.cbbSexo.Size = new System.Drawing.Size(267, 25);
+            this.cbbSexo.TabIndex = 15;
             // 
             // label8
             // 
@@ -344,19 +357,6 @@
             // Notificador
             // 
             this.Notificador.ContainerControl = this;
-            // 
-            // cbbSexo
-            // 
-            this.cbbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbSexo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSexo.FormattingEnabled = true;
-            this.cbbSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.cbbSexo.Location = new System.Drawing.Point(11, 253);
-            this.cbbSexo.Name = "cbbSexo";
-            this.cbbSexo.Size = new System.Drawing.Size(267, 25);
-            this.cbbSexo.TabIndex = 15;
             // 
             // EstudiantesEdicion
             // 

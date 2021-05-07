@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbRoles = new System.Windows.Forms.ComboBox();
             this.dtgPermisos = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.cbbRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbRoles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbRoles.FormattingEnabled = true;
-            this.cbbRoles.Location = new System.Drawing.Point(24, 54);
+            this.cbbRoles.Location = new System.Drawing.Point(91, 54);
             this.cbbRoles.Name = "cbbRoles";
             this.cbbRoles.Size = new System.Drawing.Size(382, 25);
             this.cbbRoles.TabIndex = 1;
@@ -66,8 +66,8 @@
             this.dtgPermisos.AllowUserToAddRows = false;
             this.dtgPermisos.AllowUserToDeleteRows = false;
             this.dtgPermisos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dtgPermisos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dtgPermisos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgPermisos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgPermisos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -76,14 +76,14 @@
             this.IDOpcion,
             this.Opcion,
             this.IDPermiso});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgPermisos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgPermisos.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgPermisos.Location = new System.Drawing.Point(24, 108);
             this.dtgPermisos.MultiSelect = false;
             this.dtgPermisos.Name = "dtgPermisos";
@@ -144,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PermisosEdicion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestión de Pemisos del Sistema";
             this.Load += new System.EventHandler(this.PermisosEdicion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisos)).EndInit();

@@ -63,6 +63,7 @@
     <Compile Include="CLS\Empleados.cs" />
     <Compile Include="CLS\Permisos.cs" />
     <Compile Include="CLS\Roles.cs" />
+    <Compile Include="CLS\Usuarios.cs" />
     <Compile Include="GUI\EmpleadosEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +75,12 @@
     </Compile>
     <Compile Include="GUI\EmpleadosGestion.Designer.cs">
       <DependentUpon>EmpleadosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EmpleadosListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EmpleadosListado.Designer.cs">
+      <DependentUpon>EmpleadosListado.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\PermisosEdicion.cs">
       <SubType>Form</SubType>
@@ -93,6 +100,19 @@
     <Compile Include="GUI\RolesGestion.Designer.cs">
       <DependentUpon>RolesGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UsuariosEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuariosEdicion.Designer.cs">
+      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UsuariosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\UsuariosGestion.Designer.cs">
+      <DependentUpon>UsuariosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INTERFACE\Comunicar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,6 +137,9 @@
     <EmbeddedResource Include="GUI\EmpleadosGestion.resx">
       <DependentUpon>EmpleadosGestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EmpleadosListado.resx">
+      <DependentUpon>EmpleadosListado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\PermisosEdicion.resx">
       <DependentUpon>PermisosEdicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\RolesGestion.resx">
       <DependentUpon>RolesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuariosEdicion.resx">
+      <DependentUpon>UsuariosEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UsuariosGestion.resx">
+      <DependentUpon>UsuariosGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

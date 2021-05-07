@@ -88,6 +88,7 @@
             this.gestiónDeUsuariosToolStripMenuItem.Name = "gestiónDeUsuariosToolStripMenuItem";
             this.gestiónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de usuarios";
+            this.gestiónDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeUsuariosToolStripMenuItem_Click);
             // 
             // rolesDelSistemaToolStripMenuItem
             // 

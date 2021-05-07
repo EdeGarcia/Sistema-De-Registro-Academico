@@ -189,7 +189,41 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODOS_LOS_USUARIOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT a.IDUsuario, a.Usuario, b.Rol, CONCAT(c.Nombres, '', c.Apellidos) AS Empleado, a.IDEmpleado
+                                FROM usuarios a, roles b, empleados c
+                                WHERE a.IDRol = b.IDRol AND a.IDEmpleado = c.IDEmpleado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
 
+            return Resultados;
+        }
+
+        public static DataTable LISTADO_DE_EMPLEADOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDEmpleado, Nombres, Apellidos, Titulo, DUI FROM empleados;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
 
 
 

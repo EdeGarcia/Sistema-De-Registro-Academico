@@ -150,5 +150,19 @@ namespace NaMaE.GUI
 
             }
         }
+
+        private void gestiónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                General.GUI.UsuariosGestion f = new General.GUI.UsuariosGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
