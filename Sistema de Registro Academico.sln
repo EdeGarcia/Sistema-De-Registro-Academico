@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResponsablesYEstudiantes", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Materias", "Materias\Materias.csproj", "{03446EDD-5AC6-410E-AAE2-37574580E300}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matriculas", "Matriculas\Matriculas.csproj", "{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{03446EDD-5AC6-410E-AAE2-37574580E300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03446EDD-5AC6-410E-AAE2-37574580E300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03446EDD-5AC6-410E-AAE2-37574580E300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

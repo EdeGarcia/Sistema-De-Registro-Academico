@@ -92,6 +92,27 @@ namespace NaMaE.GUI
         private void Principal_Load(object sender, EventArgs e)
         {
             lblUsuario.Text = oSesion.Usuario;
+
+            //Haz esto en el evento Load de tu formulario MDI
+
+            MdiClient oMDI;
+
+            //recorremos todos los controles hijos del formulario
+            foreach (Control ctl in this.Controls)
+            {
+                try
+                {
+                    // Intentamos castear el objeto MdiClient
+                    oMDI = (MdiClient)ctl;
+
+                    // Cuando sea casteado con éxito, podremos cambiar el color así
+                    oMDI.BackColor = Color.FromArgb(180, 192, 255);
+                }
+                catch (InvalidCastException exc)
+                {
+                    // No hacemos nada cuando el control no sea tupo MdiClient
+                }
+            }
         }
 
         private void gestiónDeResponsablesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,6 +177,35 @@ namespace NaMaE.GUI
             try
             {
                 General.GUI.UsuariosGestion f = new General.GUI.UsuariosGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void gestionarMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Comprobacion de permiso
+                Matriculas.GUI.MatriculasGestion f = new Matriculas.GUI.MatriculasGestion();
+                f.MdiParent = this;
+                f.Show();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void asignaciónDeSecciónAMaestroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GradosYSecciones.GUI.MaestrosSeccionesGestion f = new GradosYSecciones.GUI.MaestrosSeccionesGestion();
                 f.MdiParent = this;
                 f.Show();
             }

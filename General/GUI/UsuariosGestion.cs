@@ -98,6 +98,12 @@ namespace General.GUI
                 {
                     CLS.Usuarios oEntidad = new CLS.Usuarios();
                     oEntidad.IDUsuario = dtgUsuarios.CurrentRow.Cells["IDUsuario"].Value.ToString();
+                    oEntidad.IDEmpleado = dtgUsuarios.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+
+                    if(dtgUsuarios.CurrentRow.Cells["Rol"].Value.ToString() == "MAESTRO")
+                    {
+                        oEntidad.EliminarMaestro();
+                    }
 
                     if (oEntidad.Eliminar())
                     {

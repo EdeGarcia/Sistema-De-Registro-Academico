@@ -160,7 +160,7 @@
             // 
             this.dtgEstudiantes.AllowUserToAddRows = false;
             this.dtgEstudiantes.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.dtgEstudiantes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEstudiantes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgEstudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None;

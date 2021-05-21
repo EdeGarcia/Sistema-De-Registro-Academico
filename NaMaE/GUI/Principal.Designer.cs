@@ -39,12 +39,15 @@
             this.gestionarGradosYSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarGradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionarSeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.responsablesYEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeResponsablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeMateriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignarMateriasAGradosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matriculasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionarMatriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
@@ -58,7 +61,8 @@
             this.generalToolStripMenuItem,
             this.gestionarGradosYSeccionesToolStripMenuItem,
             this.responsablesYEstudiantesToolStripMenuItem,
-            this.materiasToolStripMenuItem});
+            this.materiasToolStripMenuItem,
+            this.matriculasToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(795, 24);
@@ -108,7 +112,8 @@
             // 
             this.gestionarGradosYSeccionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionarGradosToolStripMenuItem,
-            this.gestionarSeccionesToolStripMenuItem});
+            this.gestionarSeccionesToolStripMenuItem,
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem});
             this.gestionarGradosYSeccionesToolStripMenuItem.Name = "gestionarGradosYSeccionesToolStripMenuItem";
             this.gestionarGradosYSeccionesToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
             this.gestionarGradosYSeccionesToolStripMenuItem.Text = "Grados y secciones";
@@ -116,16 +121,23 @@
             // gestionarGradosToolStripMenuItem
             // 
             this.gestionarGradosToolStripMenuItem.Name = "gestionarGradosToolStripMenuItem";
-            this.gestionarGradosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.gestionarGradosToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.gestionarGradosToolStripMenuItem.Text = "Gestionar grados";
             this.gestionarGradosToolStripMenuItem.Click += new System.EventHandler(this.gestionarGradosToolStripMenuItem_Click);
             // 
             // gestionarSeccionesToolStripMenuItem
             // 
             this.gestionarSeccionesToolStripMenuItem.Name = "gestionarSeccionesToolStripMenuItem";
-            this.gestionarSeccionesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.gestionarSeccionesToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
             this.gestionarSeccionesToolStripMenuItem.Text = "Gestionar secciones";
             this.gestionarSeccionesToolStripMenuItem.Click += new System.EventHandler(this.gestionarSeccionesToolStripMenuItem_Click);
+            // 
+            // asignaciónDeSecciónAMaestroToolStripMenuItem
+            // 
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem.Name = "asignaciónDeSecciónAMaestroToolStripMenuItem";
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem.Text = "Asignación de sección a maestro";
+            this.asignaciónDeSecciónAMaestroToolStripMenuItem.Click += new System.EventHandler(this.asignaciónDeSecciónAMaestroToolStripMenuItem_Click);
             // 
             // responsablesYEstudiantesToolStripMenuItem
             // 
@@ -172,6 +184,21 @@
             this.asignarMateriasAGradosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.asignarMateriasAGradosToolStripMenuItem.Text = "Asignar materias a grados";
             this.asignarMateriasAGradosToolStripMenuItem.Click += new System.EventHandler(this.asignarMateriasAGradosToolStripMenuItem_Click);
+            // 
+            // matriculasToolStripMenuItem
+            // 
+            this.matriculasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionarMatriculaToolStripMenuItem});
+            this.matriculasToolStripMenuItem.Name = "matriculasToolStripMenuItem";
+            this.matriculasToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.matriculasToolStripMenuItem.Text = "Matriculas";
+            // 
+            // gestionarMatriculaToolStripMenuItem
+            // 
+            this.gestionarMatriculaToolStripMenuItem.Name = "gestionarMatriculaToolStripMenuItem";
+            this.gestionarMatriculaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.gestionarMatriculaToolStripMenuItem.Text = "Gestionar matricula";
+            this.gestionarMatriculaToolStripMenuItem.Click += new System.EventHandler(this.gestionarMatriculaToolStripMenuItem_Click);
             // 
             // lblUsuario
             // 
@@ -238,6 +265,9 @@
         private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónDeMateriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignarMateriasAGradosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matriculasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionarMatriculaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignaciónDeSecciónAMaestroToolStripMenuItem;
     }
 }
 

@@ -97,6 +97,7 @@
             // 
             // txbRol
             // 
+            this.txbRol.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txbRol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbRol.Location = new System.Drawing.Point(28, 113);
             this.txbRol.Name = "txbRol";

@@ -154,7 +154,7 @@
             // 
             this.dtgMaterias.AllowUserToAddRows = false;
             this.dtgMaterias.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.dtgMaterias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgMaterias.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgMaterias.BorderStyle = System.Windows.Forms.BorderStyle.None;

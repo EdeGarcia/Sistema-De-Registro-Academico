@@ -44,6 +44,7 @@ namespace General.GUI
 
             try
             {
+
                 if (txbIDUsuario.TextLength > 0)
                 {
                     //Esta actualizando
@@ -62,6 +63,14 @@ namespace General.GUI
                 else
                 {
                     //Esta agregando
+                    if(cbbRoles.Text == "MAESTRO")
+                    {
+                        if (oEntidad.GuardarMaestro())
+                        {
+
+                        }
+                    }
+
                     if (oEntidad.Guardar())
                     {
                         MessageBox.Show("Registro ingresado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);

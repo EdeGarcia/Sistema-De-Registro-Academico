@@ -193,7 +193,7 @@ namespace CacheManager.CLS
         {
             DataTable Resultados = new DataTable();
             DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
-            String Consulta = @"SELECT a.IDUsuario, a.Usuario, b.Rol, CONCAT(c.Nombres, '', c.Apellidos) AS Empleado, a.IDEmpleado
+            String Consulta = @"SELECT a.IDUsuario, a.Usuario, b.Rol, CONCAT(c.Nombres, ' ', c.Apellidos) AS Empleado, a.IDEmpleado
                                 FROM usuarios a, roles b, empleados c
                                 WHERE a.IDRol = b.IDRol AND a.IDEmpleado = c.IDEmpleado;";
             try
@@ -225,6 +225,115 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable MAESTRO_POR_SECCION()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT a.IDMaestro_Seccion, CONCAT(d.Nombres, ' ', d.Apellidos) AS Maestro, e.Descripcion AS Grado ,c.Descripcion AS Seccion, c.Turno
+                                FROM maestros_secciones a, maestros b, secciones c, empleados d, grados e
+                                WHERE a.IDMaestro = b.IDMaestro AND a.IDSeccion = c.IDSeccion AND b.IDEmpleado = d.IDEmpleado AND c.IDGrado = e.IDGrado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable SECCIONES_DE_UN_GRADO(String pIDGrado)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDSeccion, Descripcion FROM secciones WHERE IDGrado = '"+pIDGrado+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable LISTADO_DE_MAESTROS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT a.IDMaestro, CONCAT(b.Nombres, ' ', b.Apellidos) AS Maestro,b.Titulo ,b.DUI
+                                FROM maestros a, empleados b
+                                WHERE a.IDEmpleado = b.IDEmpleado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable LISTADO_DE_ESTUDIANTES()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDEstudiante, NIE, CONCAT(Nombres, ' ', Apellidos) AS Estudiante FROM Estudiantes;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable DATOS_SECCION(String pIDSeccion)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT Turno, Cupo FROM Secciones WHERE IDSeccion = '"+pIDSeccion+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable TODAS_LAS_MATRICULAS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT a.IDMatricula, a.IDEstudiante ,CONCAT(b.Nombres, ' ', b.Apellidos) AS Estudiante, c.Descripcion AS Grado, d.Descripcion AS Seccion, d.Turno, a.FechaMatricula,
+                                (SELECT CONCAT(z.Nombres, ' ', z.Apellidos) FROM maestros_secciones x, maestros y, empleados z WHERE x.IDMaestro = y.IDMaestro AND y.IDEmpleado = z.IDEmpleado AND x.IDSeccion = a.IDSeccion) AS Maestro
+                                FROM matriculas a, estudiantes b, grados c, secciones d
+                                WHERE a.IDEstudiante = b.IDEstudiante AND a.IDGrado = c.IDGrado AND a.IDSeccion = d.IDSeccion
+                                ORDER BY Grado;";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
 
 
         //

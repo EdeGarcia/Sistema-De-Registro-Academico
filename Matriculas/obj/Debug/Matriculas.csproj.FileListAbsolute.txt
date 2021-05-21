@@ -1,0 +1,17 @@
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\Matriculas.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\Matriculas.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\SesionManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\CacheManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\DataManager.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\MySql.Data.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\SesionManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\CacheManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\bin\Debug\DataManager.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.csprojResolveAssemblyReference.cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.GUI.MatriculasEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.GUI.MatriculasGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.Properties.Resources.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.csproj.GenerateResource.Cache
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.dll
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.pdb
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Matriculas\obj\Debug\Matriculas.GUI.EstudiantesListado.resources

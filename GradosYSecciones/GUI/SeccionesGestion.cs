@@ -74,7 +74,7 @@ namespace GradosYSecciones.GUI
                     SeccionesEdicion f = new SeccionesEdicion();
                     f.txbIDSeccion.Text = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
                     f.txbDescripcion.Text = dtgSecciones.CurrentRow.Cells["Seccion"].Value.ToString();
-                    f.txbTurno.Text = dtgSecciones.CurrentRow.Cells["Turno"].Value.ToString();
+                    f.cbbTurno.Text = dtgSecciones.CurrentRow.Cells["Turno"].Value.ToString();
                     f.txbAula.Text = dtgSecciones.CurrentRow.Cells["Aula"].Value.ToString();
                     f.txbCupo.Text = dtgSecciones.CurrentRow.Cells["Cupo"].Value.ToString();
                     //f.cbbGrados.DisplayMember = dtgSecciones.CurrentRow.Cells["Grado"].Value.ToString();

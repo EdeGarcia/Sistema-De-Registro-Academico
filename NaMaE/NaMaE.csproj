@@ -139,6 +139,10 @@
       <Project>{03446edd-5ac6-410e-aae2-37574580e300}</Project>
       <Name>Materias</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Matriculas\Matriculas.csproj">
+      <Project>{5f43f3ea-ecc3-45b8-8112-4e10f4cc2396}</Project>
+      <Name>Matriculas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResponsablesYEstudiantes\ResponsablesYEstudiantes.csproj">
       <Project>{71c822a6-4043-4b80-b4c6-c3a4d0d742fb}</Project>
       <Name>ResponsablesYEstudiantes</Name>

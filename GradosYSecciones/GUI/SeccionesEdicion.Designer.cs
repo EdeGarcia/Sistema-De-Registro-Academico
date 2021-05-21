@@ -34,7 +34,6 @@
             this.txbIDSeccion = new System.Windows.Forms.TextBox();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txbTurno = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txbAula = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbbTurno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,14 +84,6 @@
             this.label2.Size = new System.Drawing.Size(57, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Sección";
-            // 
-            // txbTurno
-            // 
-            this.txbTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTurno.Location = new System.Drawing.Point(245, 102);
-            this.txbTurno.Name = "txbTurno";
-            this.txbTurno.Size = new System.Drawing.Size(272, 23);
-            this.txbTurno.TabIndex = 1;
             // 
             // label3
             // 
@@ -189,12 +181,26 @@
             // 
             this.Notificador.ContainerControl = this;
             // 
+            // cbbTurno
+            // 
+            this.cbbTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTurno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbTurno.FormattingEnabled = true;
+            this.cbbTurno.Items.AddRange(new object[] {
+            "Matutino",
+            "Vespertino"});
+            this.cbbTurno.Location = new System.Drawing.Point(245, 102);
+            this.cbbTurno.Name = "cbbTurno";
+            this.cbbTurno.Size = new System.Drawing.Size(268, 25);
+            this.cbbTurno.TabIndex = 11;
+            // 
             // SeccionesEdicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(529, 403);
+            this.Controls.Add(this.cbbTurno);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cbbGrados);
@@ -203,7 +209,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbAula);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbTurno);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbDescripcion);
             this.Controls.Add(this.label2);
@@ -233,9 +238,9 @@
         private System.Windows.Forms.ErrorProvider Notificador;
         public System.Windows.Forms.TextBox txbIDSeccion;
         public System.Windows.Forms.TextBox txbDescripcion;
-        public System.Windows.Forms.TextBox txbTurno;
         public System.Windows.Forms.TextBox txbAula;
         public System.Windows.Forms.TextBox txbCupo;
         public System.Windows.Forms.ComboBox cbbGrados;
+        public System.Windows.Forms.ComboBox cbbTurno;
     }
 }

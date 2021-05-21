@@ -14,3 +14,6 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\ob
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.pdb
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.SeccionesGestion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.SeccionesEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.MaestrosSeccionesGestion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.MaestrosSeccionesEdicion.resources
+C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\GradosYSecciones\obj\Debug\GradosYSecciones.GUI.MaestrosListado.resources

@@ -63,7 +63,7 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(600, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(602, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -114,7 +114,7 @@
             this.lblEmpleados});
             this.statusStrip1.Location = new System.Drawing.Point(0, 459);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(600, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(602, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -128,11 +128,11 @@
             // 
             this.dtgEmpleados.AllowUserToAddRows = false;
             this.dtgEmpleados.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.dtgEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEmpleados.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dtgEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDEmpleado,
@@ -147,7 +147,7 @@
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(600, 427);
+            this.dtgEmpleados.Size = new System.Drawing.Size(602, 427);
             this.dtgEmpleados.TabIndex = 2;
             // 
             // IDEmpleado
@@ -193,7 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 481);
+            this.ClientSize = new System.Drawing.Size(602, 481);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

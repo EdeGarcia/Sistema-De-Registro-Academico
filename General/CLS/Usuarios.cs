@@ -14,6 +14,7 @@ namespace General.CLS
         String _Clave;
         String _IDEmpleado;
 
+
         public string IDUsuario
         {
             get
@@ -131,6 +132,59 @@ namespace General.CLS
         {
             Boolean Resultado = false;
             String Sentencia = @"DELETE FROM Usuarios WHERE IDUsuario = '"+this._IDUsuario+"'; ";
+
+            try
+            {
+                DataManager.CLS.OperacionBD Operacion = new DataManager.CLS.OperacionBD();
+                if (Operacion.Eliminar(Sentencia) > 0)
+                {
+                    Resultado = true;
+                }
+                else
+                {
+                    Resultado = false;
+                }
+            }
+            catch
+            {
+                Resultado = false;
+            }
+
+            return Resultado;
+        }
+
+
+        //Crear Maestro
+        public Boolean GuardarMaestro()
+        {
+            Boolean Resultado = false;
+            String Sentencia = @"INSERT INTO Maestros(IDEmpleado) VALUES('"+this._IDEmpleado+"')";
+
+            try
+            {
+                DataManager.CLS.OperacionBD Operacion = new DataManager.CLS.OperacionBD();
+                if (Operacion.Insertar(Sentencia) > 0)
+                {
+                    Resultado = true;
+                }
+                else
+                {
+                    Resultado = false;
+                }
+            }
+            catch
+            {
+                Resultado = false;
+            }
+
+            return Resultado;
+        }
+
+        //Eliminar Maestro
+        public Boolean EliminarMaestro()
+        {
+            Boolean Resultado = false;
+            String Sentencia = @"DELETE FROM Maestros WHERE IDEmpleado = '" + this._IDEmpleado + "'; ";
 
             try
             {

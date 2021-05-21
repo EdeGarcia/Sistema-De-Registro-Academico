@@ -33,6 +33,9 @@ namespace NaMaE.CLS
                 {
                     Principal f = new Principal();
                     f.ShowDialog();
+                    //
+                    System.Diagnostics.Process.GetCurrentProcess().Kill();
+                    Application.Exit();
                 }
             }
         }

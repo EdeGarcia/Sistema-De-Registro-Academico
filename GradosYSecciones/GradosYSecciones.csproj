@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLS\Grados.cs" />
+    <Compile Include="CLS\Maestros_Secciones.cs" />
     <Compile Include="CLS\Secciones.cs" />
     <Compile Include="GUI\GradosEdicion.cs">
       <SubType>Form</SubType>
@@ -56,6 +57,24 @@
     <Compile Include="GUI\GradosGestion.Designer.cs">
       <DependentUpon>GradosGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\MaestrosListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MaestrosListado.Designer.cs">
+      <DependentUpon>MaestrosListado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MaestrosSeccionesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MaestrosSeccionesEdicion.Designer.cs">
+      <DependentUpon>MaestrosSeccionesEdicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MaestrosSeccionesGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MaestrosSeccionesGestion.Designer.cs">
+      <DependentUpon>MaestrosSeccionesGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SeccionesEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +87,7 @@
     <Compile Include="GUI\SeccionesGestion.Designer.cs">
       <DependentUpon>SeccionesGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="INTERFACE\Comunicar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,6 +102,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GradosGestion.resx">
       <DependentUpon>GradosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MaestrosListado.resx">
+      <DependentUpon>MaestrosListado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MaestrosSeccionesEdicion.resx">
+      <DependentUpon>MaestrosSeccionesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MaestrosSeccionesGestion.resx">
+      <DependentUpon>MaestrosSeccionesGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SeccionesEdicion.resx">
       <DependentUpon>SeccionesEdicion.cs</DependentUpon>

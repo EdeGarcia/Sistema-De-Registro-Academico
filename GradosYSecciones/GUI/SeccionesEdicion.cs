@@ -34,7 +34,7 @@ namespace GradosYSecciones.GUI
             CLS.Secciones oEntidad = new CLS.Secciones();
             oEntidad.IDSeccion = txbIDSeccion.Text;
             oEntidad.Descripcion = txbDescripcion.Text;
-            oEntidad.Turno = txbTurno.Text;
+            oEntidad.Turno = cbbTurno.Text;
             oEntidad.Aula = txbAula.Text;
             oEntidad.Cupo = txbCupo.Text;
             oEntidad.IDGrado = cbbGrados.SelectedValue.ToString();
@@ -85,12 +85,6 @@ namespace GradosYSecciones.GUI
             {
                 Resultado = false;
                 Notificador.SetError(txbDescripcion, "Este campo no puede quedar vacío");
-            }
-
-            if(txbTurno.TextLength == 0)
-            {
-                Resultado = false;
-                Notificador.SetError(txbTurno, "Este campo no puede quedar vacío");
             }
 
             if(txbAula.TextLength == 0)

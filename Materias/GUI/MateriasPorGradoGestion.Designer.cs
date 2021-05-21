@@ -118,7 +118,7 @@
             // 
             this.dtgMateriasGrado.AllowUserToAddRows = false;
             this.dtgMateriasGrado.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.dtgMateriasGrado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgMateriasGrado.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgMateriasGrado.BorderStyle = System.Windows.Forms.BorderStyle.None;

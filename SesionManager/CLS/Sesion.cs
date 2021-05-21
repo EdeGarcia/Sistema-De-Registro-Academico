@@ -19,6 +19,8 @@ namespace SesionManager.CLS
         String _Rol;
         String _IDUsuario;
         String _Empleado;
+        //
+        String _IDEmpleado;
         DataTable _PERMISOS = new DataTable();
 
         public static Sesion Instancia
@@ -79,6 +81,19 @@ namespace SesionManager.CLS
             }
         }
 
+        public string IDEmpleado
+        {
+            get
+            {
+                return _IDEmpleado;
+            }
+
+            set
+            {
+                _IDEmpleado = value;
+            }
+        }
+
         Sesion()
         {
         }
@@ -99,6 +114,7 @@ namespace SesionManager.CLS
                     _IDRol = DatosSesion.Rows[0]["IDRol"].ToString();
                     _Rol = DatosSesion.Rows[0]["Rol"].ToString();
                     _Empleado = DatosSesion.Rows[0]["Empleado"].ToString();
+                    _IDEmpleado = DatosSesion.Rows[0]["IDEmpleado"].ToString();
                     Autorizado = true;
                     CargarPermisos();
                 }
