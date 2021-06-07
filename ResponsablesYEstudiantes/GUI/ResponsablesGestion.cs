@@ -14,6 +14,9 @@ namespace ResponsablesYEstudiantes.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_RESPONSABLES();
@@ -53,67 +56,76 @@ namespace ResponsablesYEstudiantes.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(16))
             {
-                ResponsablesEdicion f = new ResponsablesEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
+                try
+                {
+                    ResponsablesEdicion f = new ResponsablesEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(16))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    ResponsablesEdicion f = new ResponsablesEdicion();
-                    f.txbIDResponsable.Text = dtgResponsables.CurrentRow.Cells["ID"].Value.ToString();
-                    f.txbNombres.Text = dtgResponsables.CurrentRow.Cells["Nombres"].Value.ToString();
-                    f.txbApellidos.Text = dtgResponsables.CurrentRow.Cells["Apellidos"].Value.ToString();
-                    f.dtpFechaDeNacimiento.Text = dtgResponsables.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    f.cbbSexo.Text = dtgResponsables.CurrentRow.Cells["Sexo"].Value.ToString();
-                    f.txbTipoDeParentesco.Text = dtgResponsables.CurrentRow.Cells["TipoDeParentesco"].Value.ToString();
-                    f.txbDui.Text = dtgResponsables.CurrentRow.Cells["DUI"].Value.ToString();
-                    f.txbNit.Text = dtgResponsables.CurrentRow.Cells["NIT"].Value.ToString();
-                    f.txbTelefono.Text = dtgResponsables.CurrentRow.Cells["Telefono"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ResponsablesEdicion f = new ResponsablesEdicion();
+                        f.txbIDResponsable.Text = dtgResponsables.CurrentRow.Cells["ID"].Value.ToString();
+                        f.txbNombres.Text = dtgResponsables.CurrentRow.Cells["Nombres"].Value.ToString();
+                        f.txbApellidos.Text = dtgResponsables.CurrentRow.Cells["Apellidos"].Value.ToString();
+                        f.dtpFechaDeNacimiento.Text = dtgResponsables.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
+                        f.cbbSexo.Text = dtgResponsables.CurrentRow.Cells["Sexo"].Value.ToString();
+                        f.txbTipoDeParentesco.Text = dtgResponsables.CurrentRow.Cells["TipoDeParentesco"].Value.ToString();
+                        f.txbDui.Text = dtgResponsables.CurrentRow.Cells["DUI"].Value.ToString();
+                        f.txbNit.Text = dtgResponsables.CurrentRow.Cells["NIT"].Value.ToString();
+                        f.txbTelefono.Text = dtgResponsables.CurrentRow.Cells["Telefono"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(16))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Responsables oEntidad = new CLS.Responsables();
-                    oEntidad.IDResponsable = dtgResponsables.CurrentRow.Cells["ID"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Responsables oEntidad = new CLS.Responsables();
+                        oEntidad.IDResponsable = dtgResponsables.CurrentRow.Cells["ID"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

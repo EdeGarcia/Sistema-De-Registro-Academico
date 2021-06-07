@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsNotasSeccion" targetNamespace="http://tempuri.org/dtsNotasSeccion.xsd" xmlns:mstns="http://tempuri.org/dtsNotasSeccion.xsd" xmlns="http://tempuri.org/dtsNotasSeccion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsNotasSeccion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsNotasSeccion" msprop:Generator_UserDSName="dtsNotasSeccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Notas" msprop:Generator_TableClassName="NotasDataTable" msprop:Generator_TableVarName="tableNotas" msprop:Generator_RowChangedName="NotasRowChanged" msprop:Generator_TablePropName="Notas" msprop:Generator_RowDeletingName="NotasRowDeleting" msprop:Generator_RowChangingName="NotasRowChanging" msprop:Generator_RowEvHandlerName="NotasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasRowDeleted" msprop:Generator_RowClassName="NotasRow" msprop:Generator_UserTableName="Notas" msprop:Generator_RowEvArgName="NotasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apellidos" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnApellidos" msprop:Generator_ColumnPropNameInRow="Apellidos" msprop:Generator_ColumnPropNameInTable="ApellidosColumn" msprop:Generator_UserColumnName="Apellidos" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombres" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" type="xs:string" minOccurs="0" />
+              <xs:element name="Nota" msprop:Generator_ColumnVarNameInTable="columnNota" msprop:Generator_ColumnPropNameInRow="Nota" msprop:Generator_ColumnPropNameInTable="NotaColumn" msprop:Generator_UserColumnName="Nota" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

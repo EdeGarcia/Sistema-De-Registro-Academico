@@ -335,6 +335,126 @@ namespace CacheManager.CLS
             return Resultados;
         }
 
+        public static DataTable TODAS_LAS_NOTAS_DE_UNA_SECCION_MATERIA(String pIDGrado, String pIDSeccion, String pIDMateria, String pIDPeriodo)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT b.NIE, b.Nombres, b.Apellidos,
+                               (SELECT Nota FROM Notas WHERE IDEstudiante = a.IDEstudiante AND IDMateria = '"+pIDMateria+@"' AND IDPeriodo = '"+pIDPeriodo+@"') AS Nota,
+                               (SELECT FechaNota FROM Notas WHERE IDEstudiante = a.IDEstudiante AND IDMateria = '"+pIDMateria+@"' AND IDPeriodo = '"+pIDPeriodo+@"') AS FechaNota,
+                               (SELECT IDNota FROM Notas WHERE IDEstudiante = a.IDEstudiante AND IDMateria = '"+pIDMateria+@"' AND IDPeriodo = '"+pIDPeriodo+@"') AS IDNota,
+                               a.IDEstudiante
+                               FROM Matriculas a, Estudiantes b
+                               WHERE a.IDEstudiante = b.IDEstudiante AND IDGrado = '"+pIDGrado+"' AND IDSeccion = '"+pIDSeccion+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable MATERIAS_GRADO(String pIDGrado)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT c.IDMateria, c.Nombre
+                                FROM grados_materias a, grados b, materias c
+                                WHERE a.IDGrado = b.IDGrado AND a.IDMateria = c.IDMateria AND a.IDGrado = '" + pIDGrado + "';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable TODOS_LOS_PERIODOS()
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT IDPeriodo, Periodo FROM Periodo";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        //Reportes del sistema
+        public static DataTable REPORTE_RESPONSABLES_DE_UNA_SECCION(String pIDGrado, String pIDSeccion)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT CONCAT(c.Nombres, ' ', c.Apellidos) AS Responsable,c.TipoDeParentesco AS Parentesco, c.DUI, c.NIT, CONCAT(b.Nombres, ' ', b.Apellidos) AS Estudiante 
+                                FROM matriculas a, estudiantes b, responsables c
+                                WHERE a.IDEstudiante = b.IDEstudiante AND b.IDResponsable = c.IDResponsable
+                                AND a.IDGrado = '"+pIDGrado+"' AND a.IDSeccion = '"+pIDSeccion+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable REPORTE_ESTUDIANTES_SECCION(String pIDGrado, String pIDSeccion)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT b.NIE, b.Apellidos, b.Nombres,b.Direccion 
+                                FROM matriculas a, estudiantes b
+                                WHERE a.IDEstudiante = b.IDEstudiante AND a.IDGrado = '"+pIDGrado+"' AND a.IDSeccion = '"+pIDSeccion+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
+
+        public static DataTable REPORTE_NOTAS_MATERIA_SECCION(String pIDMateria, String pIDPeriodo, String pIDGrado, String pIDSeccion)
+        {
+            DataTable Resultados = new DataTable();
+            DataManager.CLS.OperacionBD Consultor = new DataManager.CLS.OperacionBD();
+            String Consulta = @"SELECT 
+                                b.Apellidos,
+                                b.Nombres,
+                                (SELECT Nota FROM Notas WHERE IDEstudiante = a.IDEstudiante AND IDMateria = '"+pIDMateria+@"' AND IDPeriodo = '"+pIDPeriodo+@"') AS Nota
+                                FROM matriculas a, estudiantes b
+                                WHERE a.idEstudiante = b.IDEstudiante AND a.IDGrado = '"+pIDGrado+"' AND a.IDSeccion = '"+pIDSeccion+"';";
+            try
+            {
+                Resultados = Consultor.Consultar(Consulta);
+            }
+            catch
+            {
+                Resultados = new DataTable();
+            }
+
+            return Resultados;
+        }
 
         //
         public static DataTable PERMISOS_DE_UN_USUARIO(String pIDRol)
@@ -344,7 +464,7 @@ namespace CacheManager.CLS
             String Consulta = @"SELECT DISTINCT a.IDOpcion, b.Opcion
                                 FROM permisos a, opciones b
                                 WHERE a.IDOpcion = b.IDOpcion
-                                AND a.IDRol = "+pIDRol+";";
+                                AND a.IDRol = '"+pIDRol+"';";
 
             try
             {
@@ -383,8 +503,8 @@ namespace CacheManager.CLS
             String Consulta = @"SELECT 
                                 a.IDOpcion,
                                 a.Opcion,
-                                IF(IFNULL((SELECT IDPermiso FROM permisos z WHERE z.IDRol = "+pIDRol+@" AND z.IDOpcion = a.IDOpcion),0)=0,0,1) AS Seleccion,
-                                IFNULL((SELECT IDPermiso FROM permisos z WHERE " + pIDRol+@" = 1 AND z.IDOpcion = a.IDOpcion),0) AS IDPermiso
+                                IF(IFNULL((SELECT IDPermiso FROM permisos z WHERE z.IDRol = '"+pIDRol+@"' AND z.IDOpcion = a.IDOpcion),0)=0,0,1) AS Seleccion,
+                                IFNULL((SELECT IDPermiso FROM permisos z WHERE z.IDRol =  '"+pIDRol+@"' AND z.IDOpcion = a.IDOpcion),0) AS IDPermiso
                                 FROM opciones a ORDER BY Opcion ASC;";
 
             try

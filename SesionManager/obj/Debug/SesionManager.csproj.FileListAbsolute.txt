@@ -18,3 +18,13 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\bin\D
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\Debug\SesionManager.csprojResolveAssemblyReference.cache
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\Debug\SesionManager.dll
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\SesionManager\obj\Debug\SesionManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\SesionManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\SesionManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\CacheManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\CacheManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\bin\Debug\DataManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\obj\Debug\SesionManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\obj\Debug\SesionManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\SesionManager\obj\Debug\SesionManager.pdb

@@ -14,6 +14,9 @@ namespace General.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_USUARIOS();
@@ -55,9 +58,12 @@ namespace General.GUI
         {
             try
             {
-                UsuariosEdicion f = new UsuariosEdicion();
-                f.ShowDialog();
-                Cargar();
+                if (oSesion.ComprobarPermiso(6))
+                {
+                    UsuariosEdicion f = new UsuariosEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
             }
             catch
             {
@@ -69,19 +75,22 @@ namespace General.GUI
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (oSesion.ComprobarPermiso(6))
                 {
-                    UsuariosEdicion f = new UsuariosEdicion();
-                    f.txbIDUsuario.Text = dtgUsuarios.CurrentRow.Cells["IDUsuario"].Value.ToString();
-                    f.txbUsuario.Text = dtgUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
-                    f.cbbRoles.Text = dtgUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
-                    //
-                    f.txbClave.Text = "1111";
-                    f.txbIDEmpleado.Text = dtgUsuarios.CurrentRow.Cells["IDEmpleado"].Value.ToString();
-                    f.txbEmpleado.Text = dtgUsuarios.CurrentRow.Cells["Empleado"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        UsuariosEdicion f = new UsuariosEdicion();
+                        f.txbIDUsuario.Text = dtgUsuarios.CurrentRow.Cells["IDUsuario"].Value.ToString();
+                        f.txbUsuario.Text = dtgUsuarios.CurrentRow.Cells["Usuario"].Value.ToString();
+                        f.cbbRoles.Text = dtgUsuarios.CurrentRow.Cells["Rol"].Value.ToString();
+                        //
+                        f.txbClave.Text = "1111";
+                        f.txbIDEmpleado.Text = dtgUsuarios.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+                        f.txbEmpleado.Text = dtgUsuarios.CurrentRow.Cells["Empleado"].Value.ToString();
 
-                    f.ShowDialog();
-                    Cargar();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
             }
             catch
@@ -94,25 +103,28 @@ namespace General.GUI
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (oSesion.ComprobarPermiso(6))
                 {
-                    CLS.Usuarios oEntidad = new CLS.Usuarios();
-                    oEntidad.IDUsuario = dtgUsuarios.CurrentRow.Cells["IDUsuario"].Value.ToString();
-                    oEntidad.IDEmpleado = dtgUsuarios.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Usuarios oEntidad = new CLS.Usuarios();
+                        oEntidad.IDUsuario = dtgUsuarios.CurrentRow.Cells["IDUsuario"].Value.ToString();
+                        oEntidad.IDEmpleado = dtgUsuarios.CurrentRow.Cells["IDEmpleado"].Value.ToString();
 
-                    if(dtgUsuarios.CurrentRow.Cells["Rol"].Value.ToString() == "MAESTRO")
-                    {
-                        oEntidad.EliminarMaestro();
-                    }
+                        if (dtgUsuarios.CurrentRow.Cells["Rol"].Value.ToString() == "MAESTRO")
+                        {
+                            oEntidad.EliminarMaestro();
+                        }
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

@@ -129,6 +129,10 @@
       <Project>{03ade4ec-4db6-4eb4-88a7-db2d08c166b8}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SesionManager\SesionManager.csproj">
+      <Project>{29dfba17-aa88-4742-837e-df6327f86886}</Project>
+      <Name>SesionManager</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\EmpleadosEdicion.resx">

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsEstudiantesSeccion" targetNamespace="http://tempuri.org/dtsEstudiantesSeccion.xsd" xmlns:mstns="http://tempuri.org/dtsEstudiantesSeccion.xsd" xmlns="http://tempuri.org/dtsEstudiantesSeccion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsEstudiantesSeccion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsEstudiantesSeccion" msprop:Generator_UserDSName="dtsEstudiantesSeccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Estudiantes" msprop:Generator_TableClassName="EstudiantesDataTable" msprop:Generator_TableVarName="tableEstudiantes" msprop:Generator_TablePropName="Estudiantes" msprop:Generator_RowDeletingName="EstudiantesRowDeleting" msprop:Generator_RowChangingName="EstudiantesRowChanging" msprop:Generator_RowEvHandlerName="EstudiantesRowChangeEventHandler" msprop:Generator_RowDeletedName="EstudiantesRowDeleted" msprop:Generator_UserTableName="Estudiantes" msprop:Generator_RowChangedName="EstudiantesRowChanged" msprop:Generator_RowEvArgName="EstudiantesRowChangeEvent" msprop:Generator_RowClassName="EstudiantesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NIE" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnNIE" msprop:Generator_ColumnPropNameInRow="NIE" msprop:Generator_ColumnPropNameInTable="NIEColumn" msprop:Generator_UserColumnName="NIE" type="xs:string" minOccurs="0" />
+              <xs:element name="Apellidos" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnApellidos" msprop:Generator_ColumnPropNameInRow="Apellidos" msprop:Generator_ColumnPropNameInTable="ApellidosColumn" msprop:Generator_UserColumnName="Apellidos" type="xs:string" minOccurs="0" />
+              <xs:element name="Nombres" msdata:Caption="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnNombres" msprop:Generator_ColumnPropNameInRow="Nombres" msprop:Generator_ColumnPropNameInTable="NombresColumn" msprop:Generator_UserColumnName="Nombres" type="xs:string" minOccurs="0" />
+              <xs:element name="Direccion" msprop:Generator_ColumnVarNameInTable="columnDireccion" msprop:Generator_ColumnPropNameInRow="Direccion" msprop:Generator_ColumnPropNameInTable="DireccionColumn" msprop:Generator_UserColumnName="Direccion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

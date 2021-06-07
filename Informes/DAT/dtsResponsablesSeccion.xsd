@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dtsResponsablesSeccion" targetNamespace="http://tempuri.org/dtsResponsablesSeccion.xsd" xmlns:mstns="http://tempuri.org/dtsResponsablesSeccion.xsd" xmlns="http://tempuri.org/dtsResponsablesSeccion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dtsResponsablesSeccion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dtsResponsablesSeccion" msprop:Generator_UserDSName="dtsResponsablesSeccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Responsables" msprop:Generator_TableClassName="ResponsablesDataTable" msprop:Generator_TableVarName="tableResponsables" msprop:Generator_TablePropName="Responsables" msprop:Generator_RowDeletingName="ResponsablesRowDeleting" msprop:Generator_RowChangingName="ResponsablesRowChanging" msprop:Generator_RowEvHandlerName="ResponsablesRowChangeEventHandler" msprop:Generator_RowDeletedName="ResponsablesRowDeleted" msprop:Generator_UserTableName="Responsables" msprop:Generator_RowChangedName="ResponsablesRowChanged" msprop:Generator_RowEvArgName="ResponsablesRowChangeEvent" msprop:Generator_RowClassName="ResponsablesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Responsable" msprop:Generator_ColumnVarNameInTable="columnResponsable" msprop:Generator_ColumnPropNameInRow="Responsable" msprop:Generator_ColumnPropNameInTable="ResponsableColumn" msprop:Generator_UserColumnName="Responsable" type="xs:string" minOccurs="0" />
+              <xs:element name="Parentesco" msprop:Generator_ColumnVarNameInTable="columnParentesco" msprop:Generator_ColumnPropNameInRow="Parentesco" msprop:Generator_ColumnPropNameInTable="ParentescoColumn" msprop:Generator_UserColumnName="Parentesco" type="xs:string" minOccurs="0" />
+              <xs:element name="DUI" msprop:Generator_ColumnVarNameInTable="columnDUI" msprop:Generator_ColumnPropNameInRow="DUI" msprop:Generator_ColumnPropNameInTable="DUIColumn" msprop:Generator_UserColumnName="DUI" type="xs:string" minOccurs="0" />
+              <xs:element name="NIT" msprop:Generator_ColumnVarNameInTable="columnNIT" msprop:Generator_ColumnPropNameInRow="NIT" msprop:Generator_ColumnPropNameInTable="NITColumn" msprop:Generator_UserColumnName="NIT" type="xs:string" minOccurs="0" />
+              <xs:element name="Estudiante" msprop:Generator_ColumnVarNameInTable="columnEstudiante" msprop:Generator_ColumnPropNameInRow="Estudiante" msprop:Generator_ColumnPropNameInTable="EstudianteColumn" msprop:Generator_UserColumnName="Estudiante" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

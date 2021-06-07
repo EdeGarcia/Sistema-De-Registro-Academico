@@ -23,9 +23,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                General.GUI.RolesGestion f = new General.GUI.RolesGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(7))
+                {
+                    General.GUI.RolesGestion f = new General.GUI.RolesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -37,9 +40,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                General.GUI.PermisosEdicion f = new General.GUI.PermisosEdicion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(9))
+                {
+                    General.GUI.PermisosEdicion f = new General.GUI.PermisosEdicion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -51,9 +57,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                GradosYSecciones.GUI.GradosGestion f = new GradosYSecciones.GUI.GradosGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(11))
+                {
+                    GradosYSecciones.GUI.GradosGestion f = new GradosYSecciones.GUI.GradosGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -65,9 +74,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                GradosYSecciones.GUI.SeccionesGestion f = new GradosYSecciones.GUI.SeccionesGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(13))
+                {
+                    GradosYSecciones.GUI.SeccionesGestion f = new GradosYSecciones.GUI.SeccionesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -79,9 +91,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(3))
+                {
+                    General.GUI.EmpleadosGestion f = new General.GUI.EmpleadosGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -91,7 +106,9 @@ namespace NaMaE.GUI
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            lblUsuario.Text = oSesion.Usuario;
+            lblUsuario.Text = "USUARIO: " + oSesion.Usuario;
+            lblRol.Text = "ROL: " + oSesion.Rol;
+           
 
             //Haz esto en el evento Load de tu formulario MDI
 
@@ -117,58 +134,69 @@ namespace NaMaE.GUI
 
         private void gestiónDeResponsablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(15))
             {
-                ResponsablesYEstudiantes.GUI.ResponsablesGestion f = new ResponsablesYEstudiantes.GUI.ResponsablesGestion();    
-                f.MdiParent = this;
-                f.Show();
-            }
-            catch
-            {
+                try
+                {
+                    ResponsablesYEstudiantes.GUI.ResponsablesGestion f = new ResponsablesYEstudiantes.GUI.ResponsablesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
 
+                }
             }
         }
 
         private void gestiónDeEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(17))
             {
-                ResponsablesYEstudiantes.GUI.EstudiantesGestion f = new ResponsablesYEstudiantes.GUI.EstudiantesGestion();
-                f.MdiParent = this;
-                f.Show();
-            }
-            catch
-            {
+                try
+                {
+                    ResponsablesYEstudiantes.GUI.EstudiantesGestion f = new ResponsablesYEstudiantes.GUI.EstudiantesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
 
+                }
             }
         }
 
         private void gestiónDeMateriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(19))
             {
-                Materias.GUI.MateriasGestion f = new Materias.GUI.MateriasGestion();
-                f.MdiParent = this;
-                f.Show();
-            }
-            catch
-            {
+                try
+                {
+                    Materias.GUI.MateriasGestion f = new Materias.GUI.MateriasGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
 
+                }
             }
-
         }
 
         private void asignarMateriasAGradosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(26))
             {
-                Materias.GUI.MateriasPorGradoGestion f = new Materias.GUI.MateriasPorGradoGestion();
-                f.MdiParent = this;
-                f.Show();
-            }
-            catch
-            {
+                try
+                {
+                    Materias.GUI.MateriasPorGradoGestion f = new Materias.GUI.MateriasPorGradoGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
 
+                }
             }
         }
 
@@ -176,9 +204,12 @@ namespace NaMaE.GUI
         {
             try
             {
-                General.GUI.UsuariosGestion f = new General.GUI.UsuariosGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(5))
+                {
+                    General.GUI.UsuariosGestion f = new General.GUI.UsuariosGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
@@ -188,16 +219,19 @@ namespace NaMaE.GUI
 
         private void gestionarMatriculaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(21))
             {
-                //Comprobacion de permiso
-                Matriculas.GUI.MatriculasGestion f = new Matriculas.GUI.MatriculasGestion();
-                f.MdiParent = this;
-                f.Show();
-            }
-            catch
-            {
+                try
+                {
+                    //Comprobacion de permiso
+                    Matriculas.GUI.MatriculasGestion f = new Matriculas.GUI.MatriculasGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
 
+                }
             }
         }
 
@@ -205,13 +239,136 @@ namespace NaMaE.GUI
         {
             try
             {
-                GradosYSecciones.GUI.MaestrosSeccionesGestion f = new GradosYSecciones.GUI.MaestrosSeccionesGestion();
-                f.MdiParent = this;
-                f.Show();
+                if (oSesion.ComprobarPermiso(25))
+                {
+                    GradosYSecciones.GUI.MaestrosSeccionesGestion f = new GradosYSecciones.GUI.MaestrosSeccionesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
             }
             catch
             {
 
+            }
+        }
+
+        private void gestionarNotasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(23))
+            {
+                try
+                {
+                    Notas.GUI.NotasGestion f = new Notas.GUI.NotasGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void reporteDeResponsablesDeUnaSecciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(1))
+            {
+                try
+                {
+                    Informes.GUI.ReporteResponsablesSeccion f = new Informes.GUI.ReporteResponsablesSeccion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void reporteDeEstudiatesMatriculadosEnUnaSecciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(1))
+            {
+                try
+                {
+                    Informes.GUI.ReporteEstudiantesSeccion f = new Informes.GUI.ReporteEstudiantesSeccion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void reporteDeNotasDeEstudiantesDeUnaSecciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(1))
+            {
+                try
+                {
+                    Informes.GUI.ReporteNotasEstudiante f = new Informes.GUI.ReporteNotasEstudiante();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void btnEstudiantes_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(17))
+            {
+                try
+                {
+                    ResponsablesYEstudiantes.GUI.EstudiantesGestion f = new ResponsablesYEstudiantes.GUI.EstudiantesGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void btnMatriculas_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(21))
+            {
+                try
+                {
+                    //Comprobacion de permiso
+                    Matriculas.GUI.MatriculasGestion f = new Matriculas.GUI.MatriculasGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void btnNotas_Click(object sender, EventArgs e)
+        {
+            if (oSesion.ComprobarPermiso(23))
+            {
+                try
+                {
+                    Notas.GUI.NotasGestion f = new Notas.GUI.NotasGestion();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+                catch
+                {
+
+                }
             }
         }
     }

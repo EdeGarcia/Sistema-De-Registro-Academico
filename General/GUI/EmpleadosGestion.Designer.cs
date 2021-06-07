@@ -43,15 +43,15 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblRegistros = new System.Windows.Forms.ToolStripStatusLabel();
             this.dtgEmpleados = new System.Windows.Forms.DataGridView();
-            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NIT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).BeginInit();
@@ -73,7 +73,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1116, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1142, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -146,7 +146,7 @@
             this.lblRegistros});
             this.statusStrip1.Location = new System.Drawing.Point(0, 485);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1116, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1142, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -183,80 +183,8 @@
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(1116, 453);
+            this.dtgEmpleados.Size = new System.Drawing.Size(1142, 453);
             this.dtgEmpleados.TabIndex = 2;
-            // 
-            // Titulo
-            // 
-            this.Titulo.DataPropertyName = "Titulo";
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.MinimumWidth = 50;
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            this.Titulo.Width = 175;
-            // 
-            // NIT
-            // 
-            this.NIT.DataPropertyName = "NIT";
-            this.NIT.HeaderText = "NIT";
-            this.NIT.MinimumWidth = 50;
-            this.NIT.Name = "NIT";
-            this.NIT.ReadOnly = true;
-            this.NIT.Width = 150;
-            // 
-            // DUI
-            // 
-            this.DUI.DataPropertyName = "DUI";
-            this.DUI.HeaderText = "DUI";
-            this.DUI.MinimumWidth = 50;
-            this.DUI.Name = "DUI";
-            this.DUI.ReadOnly = true;
-            this.DUI.Width = 150;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.MinimumWidth = 50;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 75;
-            // 
-            // Sexo
-            // 
-            this.Sexo.DataPropertyName = "Sexo";
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.MinimumWidth = 50;
-            this.Sexo.Name = "Sexo";
-            this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 75;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha de Nacimiento";
-            this.FechaNacimiento.MinimumWidth = 100;
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 150;
-            // 
-            // Apellidos
-            // 
-            this.Apellidos.DataPropertyName = "Apellidos";
-            this.Apellidos.HeaderText = "Apellidos";
-            this.Apellidos.MinimumWidth = 100;
-            this.Apellidos.Name = "Apellidos";
-            this.Apellidos.ReadOnly = true;
-            this.Apellidos.Width = 150;
-            // 
-            // Nombres
-            // 
-            this.Nombres.DataPropertyName = "Nombres";
-            this.Nombres.HeaderText = "Nombres";
-            this.Nombres.MinimumWidth = 100;
-            this.Nombres.Name = "Nombres";
-            this.Nombres.ReadOnly = true;
-            this.Nombres.Width = 150;
             // 
             // IDEmpleado
             // 
@@ -267,11 +195,83 @@
             this.IDEmpleado.ReadOnly = true;
             this.IDEmpleado.Width = 40;
             // 
+            // Nombres
+            // 
+            this.Nombres.DataPropertyName = "Nombres";
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.MinimumWidth = 100;
+            this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
+            this.Nombres.Width = 150;
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.DataPropertyName = "Apellidos";
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.MinimumWidth = 100;
+            this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
+            this.Apellidos.Width = 150;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha de Nacimiento";
+            this.FechaNacimiento.MinimumWidth = 100;
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 150;
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "Sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.MinimumWidth = 50;
+            this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
+            this.Sexo.Width = 75;
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.MinimumWidth = 50;
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            this.Telefono.Width = 75;
+            // 
+            // DUI
+            // 
+            this.DUI.DataPropertyName = "DUI";
+            this.DUI.HeaderText = "DUI";
+            this.DUI.MinimumWidth = 50;
+            this.DUI.Name = "DUI";
+            this.DUI.ReadOnly = true;
+            this.DUI.Width = 150;
+            // 
+            // NIT
+            // 
+            this.NIT.DataPropertyName = "NIT";
+            this.NIT.HeaderText = "NIT";
+            this.NIT.MinimumWidth = 50;
+            this.NIT.Name = "NIT";
+            this.NIT.ReadOnly = true;
+            this.NIT.Width = 150;
+            // 
+            // Titulo
+            // 
+            this.Titulo.DataPropertyName = "Titulo";
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.MinimumWidth = 50;
+            this.Titulo.Name = "Titulo";
+            this.Titulo.ReadOnly = true;
+            this.Titulo.Width = 200;
+            // 
             // EmpleadosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 507);
+            this.ClientSize = new System.Drawing.Size(1142, 507);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

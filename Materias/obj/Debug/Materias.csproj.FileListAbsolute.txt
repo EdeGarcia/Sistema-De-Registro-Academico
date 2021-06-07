@@ -14,3 +14,21 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Materias\obj\Debug\
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Materias\obj\Debug\Materias.GUI.MateriasEdicion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Materias\obj\Debug\Materias.GUI.MateriasPorGradoGestion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\Materias\obj\Debug\Materias.GUI.MateriasListado.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\Materias.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\Materias.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\CacheManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\CacheManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\DataManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.GUI.MateriasEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.GUI.MateriasGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.GUI.MateriasListado.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.GUI.MateriasPorGradoGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.Properties.Resources.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\obj\Debug\Materias.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\SesionManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Materias\bin\Debug\SesionManager.pdb

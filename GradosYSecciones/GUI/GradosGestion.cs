@@ -14,6 +14,9 @@ namespace GradosYSecciones.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_GRADOS();
@@ -45,9 +48,12 @@ namespace GradosYSecciones.GUI
         {
             try
             {
-                GradosEdicion f = new GradosEdicion();
-                f.ShowDialog();
-                Cargar();
+                if (oSesion.ComprobarPermiso(12))
+                {
+                    GradosEdicion f = new GradosEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
             }
             catch
             {
@@ -67,46 +73,52 @@ namespace GradosYSecciones.GUI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(12))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    GradosEdicion f = new GradosEdicion();
-                    f.txbIDGrado.Text = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
-                    f.txbDescripcion.Text = dtgGrados.CurrentRow.Cells["Descripcion"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        GradosEdicion f = new GradosEdicion();
+                        f.txbIDGrado.Text = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
+                        f.txbDescripcion.Text = dtgGrados.CurrentRow.Cells["Descripcion"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(12))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Grados oEntidad = new CLS.Grados();
-                    oEntidad.IDGrado = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Grados oEntidad = new CLS.Grados();
+                        oEntidad.IDGrado = dtgGrados.CurrentRow.Cells["IDGrado"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

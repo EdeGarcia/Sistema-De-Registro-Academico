@@ -14,6 +14,9 @@ namespace General.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_EMPLEADOS();
@@ -55,9 +58,12 @@ namespace General.GUI
         {
             try
             {
-                EmpleadosEdicion f = new EmpleadosEdicion();
-                f.ShowDialog();
-                Cargar();
+                if (oSesion.ComprobarPermiso(4))
+                {
+                    EmpleadosEdicion f = new EmpleadosEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
             }
             catch
             {
@@ -69,20 +75,23 @@ namespace General.GUI
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (oSesion.ComprobarPermiso(4))
                 {
-                    EmpleadosEdicion f = new EmpleadosEdicion();
-                    f.txbIDEmpleado.Text = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
-                    f.txbNombres.Text = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString();
-                    f.txbApellidos.Text = dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
-                    f.dtpFechaNacimiento.Text = dtgEmpleados.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    f.cbbSexo.Text = dtgEmpleados.CurrentRow.Cells["Sexo"].Value.ToString();
-                    f.txbTelefono.Text = dtgEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
-                    f.txbDui.Text = dtgEmpleados.CurrentRow.Cells["DUI"].Value.ToString();
-                    f.txbNit.Text = dtgEmpleados.CurrentRow.Cells["NIT"].Value.ToString();
-                    f.txbTitulo.Text = dtgEmpleados.CurrentRow.Cells["Titulo"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        EmpleadosEdicion f = new EmpleadosEdicion();
+                        f.txbIDEmpleado.Text = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+                        f.txbNombres.Text = dtgEmpleados.CurrentRow.Cells["Nombres"].Value.ToString();
+                        f.txbApellidos.Text = dtgEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
+                        f.dtpFechaNacimiento.Text = dtgEmpleados.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
+                        f.cbbSexo.Text = dtgEmpleados.CurrentRow.Cells["Sexo"].Value.ToString();
+                        f.txbTelefono.Text = dtgEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
+                        f.txbDui.Text = dtgEmpleados.CurrentRow.Cells["DUI"].Value.ToString();
+                        f.txbNit.Text = dtgEmpleados.CurrentRow.Cells["NIT"].Value.ToString();
+                        f.txbTitulo.Text = dtgEmpleados.CurrentRow.Cells["Titulo"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
             }
             catch
@@ -95,19 +104,23 @@ namespace General.GUI
         {
             try
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (oSesion.ComprobarPermiso(4))
                 {
-                    CLS.Empleados oEntidad = new CLS.Empleados();
-                    oEntidad.IDEmpleado = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CLS.Empleados oEntidad = new CLS.Empleados();
+                        oEntidad.IDEmpleado = dtgEmpleados.CurrentRow.Cells["IDEmpleado"].Value.ToString();
+
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
             }

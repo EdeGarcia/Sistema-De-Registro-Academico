@@ -15,7 +15,7 @@ namespace General.CLS
         public Boolean Guardar()
         {
             Boolean Resultado = false;
-            String Sentencia = @"INSERT INTO Permisos(IDRol, IDOpcion) VALUES('" + this._IDRol +","+ this._IDOpcion + "');";
+            String Sentencia = @"INSERT INTO Permisos(IDRol, IDOpcion) VALUES('"+this._IDRol+"', '"+this._IDOpcion+"');";
 
             try
             {
@@ -40,7 +40,7 @@ namespace General.CLS
         public Boolean Eliminar()
         {
             Boolean Resultado = false;
-            String Sentencia = @"DELETE FROM Permisos WHERE IDPermiso = "+this._IDPermiso +";";
+            String Sentencia = @"DELETE FROM Permisos WHERE IDPermiso = '"+this._IDPermiso +"';";
 
             try
             {

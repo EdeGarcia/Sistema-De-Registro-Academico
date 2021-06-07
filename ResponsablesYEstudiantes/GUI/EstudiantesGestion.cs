@@ -14,6 +14,9 @@ namespace ResponsablesYEstudiantes.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODOS_LOS_ESTUDIANTES();
@@ -43,15 +46,18 @@ namespace ResponsablesYEstudiantes.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(18))
             {
-                EstudiantesEdicion f = new EstudiantesEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
+                try
+                {
+                    EstudiantesEdicion f = new EstudiantesEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
+                catch
+                {
 
+                }
             }
         }
 
@@ -67,75 +73,80 @@ namespace ResponsablesYEstudiantes.GUI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(18))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    EstudiantesEdicion f = new EstudiantesEdicion();
-
-                    //
-                    f.txbIDEstudiante.Text = dtgEstudiantes.CurrentRow.Cells["IDEstudiante"].Value.ToString();
-                    f.txbNombres.Text = dtgEstudiantes.CurrentRow.Cells["Nombres"].Value.ToString();
-                    f.txbApellidos.Text = dtgEstudiantes.CurrentRow.Cells["Apellidos"].Value.ToString();
-                    f.txbDireccion.Text = dtgEstudiantes.CurrentRow.Cells["Direccion"].Value.ToString();
-                    f.dtpFechaDeNacimiento.Text = dtgEstudiantes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
-                    f.cbbSexo.Text = dtgEstudiantes.CurrentRow.Cells["Sexo"].Value.ToString();
-                    f.txbNie.Text = dtgEstudiantes.CurrentRow.Cells["NIE"].Value.ToString();
-
-                    //
-                    DataTable DatosResponsable = new DataTable();
-
-                    try
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        DatosResponsable = CacheManager.CLS.Cache.DATOS_DE_UN_RESPONSABLE(dtgEstudiantes.CurrentRow.Cells["IDResponsable"].Value.ToString());
+                        EstudiantesEdicion f = new EstudiantesEdicion();
 
-                        if (DatosResponsable.Rows.Count == 1)
+                        //
+                        f.txbIDEstudiante.Text = dtgEstudiantes.CurrentRow.Cells["IDEstudiante"].Value.ToString();
+                        f.txbNombres.Text = dtgEstudiantes.CurrentRow.Cells["Nombres"].Value.ToString();
+                        f.txbApellidos.Text = dtgEstudiantes.CurrentRow.Cells["Apellidos"].Value.ToString();
+                        f.txbDireccion.Text = dtgEstudiantes.CurrentRow.Cells["Direccion"].Value.ToString();
+                        f.dtpFechaDeNacimiento.Text = dtgEstudiantes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
+                        f.cbbSexo.Text = dtgEstudiantes.CurrentRow.Cells["Sexo"].Value.ToString();
+                        f.txbNie.Text = dtgEstudiantes.CurrentRow.Cells["NIE"].Value.ToString();
+
+                        //
+                        DataTable DatosResponsable = new DataTable();
+
+                        try
                         {
-                            f.txbIDResponsable.Text = DatosResponsable.Rows[0]["IDResponsable"].ToString();
-                            f.txbNombresR.Text = DatosResponsable.Rows[0]["Nombres"].ToString();
-                            f.txbApellidosR.Text = DatosResponsable.Rows[0]["Apellidos"].ToString();
+                            DatosResponsable = CacheManager.CLS.Cache.DATOS_DE_UN_RESPONSABLE(dtgEstudiantes.CurrentRow.Cells["IDResponsable"].Value.ToString());
+
+                            if (DatosResponsable.Rows.Count == 1)
+                            {
+                                f.txbIDResponsable.Text = DatosResponsable.Rows[0]["IDResponsable"].ToString();
+                                f.txbNombresR.Text = DatosResponsable.Rows[0]["Nombres"].ToString();
+                                f.txbApellidosR.Text = DatosResponsable.Rows[0]["Apellidos"].ToString();
+                            }
                         }
-                    }
-                    catch
-                    {
+                        catch
+                        {
 
-                    }
+                        }
 
-                    //
-                    f.ShowDialog();
-                    Cargar();
+                        //
+                        f.ShowDialog();
+                        Cargar();
+                    }
+                }
+                catch
+                {
+
                 }
             }
-            catch
-            {
-
-            }
-
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(18))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Estudiantes oEntidad = new CLS.Estudiantes();
-                    oEntidad.IDEstudiante = dtgEstudiantes.CurrentRow.Cells["IDEstudiante"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Estudiantes oEntidad = new CLS.Estudiantes();
+                        oEntidad.IDEstudiante = dtgEstudiantes.CurrentRow.Cells["IDEstudiante"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

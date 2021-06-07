@@ -18,3 +18,25 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\G
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.EmpleadosListado.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.UsuariosEdicion.resources
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\General\obj\Debug\General.GUI.UsuariosGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\General.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\General.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\CacheManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\CacheManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\DataManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.EmpleadosEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.EmpleadosGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.EmpleadosListado.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.PermisosEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.RolesEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.RolesGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.UsuariosEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.GUI.UsuariosGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.Properties.Resources.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\obj\Debug\General.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\SesionManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\General\bin\Debug\SesionManager.pdb

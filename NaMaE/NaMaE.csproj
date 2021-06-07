@@ -135,6 +135,10 @@
       <Project>{1f5d9336-9b89-4cd3-adc5-20717ce5f4ee}</Project>
       <Name>GradosYSecciones</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Informes\Informes.csproj">
+      <Project>{08009e3b-ed78-426a-95b7-28f6d9fe59c0}</Project>
+      <Name>Informes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Materias\Materias.csproj">
       <Project>{03446edd-5ac6-410e-aae2-37574580e300}</Project>
       <Name>Materias</Name>
@@ -142,6 +146,10 @@
     <ProjectReference Include="..\Matriculas\Matriculas.csproj">
       <Project>{5f43f3ea-ecc3-45b8-8112-4e10f4cc2396}</Project>
       <Name>Matriculas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Notas\Notas.csproj">
+      <Project>{1347c30d-0e9a-471b-ae08-930dbd8c312b}</Project>
+      <Name>Notas</Name>
     </ProjectReference>
     <ProjectReference Include="..\ResponsablesYEstudiantes\ResponsablesYEstudiantes.csproj">
       <Project>{71c822a6-4043-4b80-b4c6-c3a4d0d742fb}</Project>

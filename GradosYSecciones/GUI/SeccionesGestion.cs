@@ -14,6 +14,9 @@ namespace GradosYSecciones.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODAS_LAS_SECCIONES();
@@ -53,64 +56,73 @@ namespace GradosYSecciones.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(14))
             {
-                SeccionesEdicion f = new SeccionesEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
+                try
+                {
+                    SeccionesEdicion f = new SeccionesEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(14))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    SeccionesEdicion f = new SeccionesEdicion();
-                    f.txbIDSeccion.Text = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
-                    f.txbDescripcion.Text = dtgSecciones.CurrentRow.Cells["Seccion"].Value.ToString();
-                    f.cbbTurno.Text = dtgSecciones.CurrentRow.Cells["Turno"].Value.ToString();
-                    f.txbAula.Text = dtgSecciones.CurrentRow.Cells["Aula"].Value.ToString();
-                    f.txbCupo.Text = dtgSecciones.CurrentRow.Cells["Cupo"].Value.ToString();
-                    //f.cbbGrados.DisplayMember = dtgSecciones.CurrentRow.Cells["Grado"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        SeccionesEdicion f = new SeccionesEdicion();
+                        f.txbIDSeccion.Text = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
+                        f.txbDescripcion.Text = dtgSecciones.CurrentRow.Cells["Seccion"].Value.ToString();
+                        f.cbbTurno.Text = dtgSecciones.CurrentRow.Cells["Turno"].Value.ToString();
+                        f.txbAula.Text = dtgSecciones.CurrentRow.Cells["Aula"].Value.ToString();
+                        f.txbCupo.Text = dtgSecciones.CurrentRow.Cells["Cupo"].Value.ToString();
+                        //f.cbbGrados.DisplayMember = dtgSecciones.CurrentRow.Cells["Grado"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(14))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Secciones oEntidad = new CLS.Secciones();
-                    oEntidad.IDSeccion = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Secciones oEntidad = new CLS.Secciones();
+                        oEntidad.IDSeccion = dtgSecciones.CurrentRow.Cells["ID"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

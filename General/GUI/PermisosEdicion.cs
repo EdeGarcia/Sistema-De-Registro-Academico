@@ -12,19 +12,22 @@ namespace General.GUI
 {
     public partial class PermisosEdicion : Form
     {
+        BindingSource Permisos = new BindingSource();
+
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void CargarPermisos()
         {
-            DataTable Permisos = new DataTable();
-
             try
             {
-                Permisos = CacheManager.CLS.Cache.PERMISOS_DE_UN_ROL(cbbRoles.SelectedValue.ToString());
+                Permisos.DataSource = CacheManager.CLS.Cache.PERMISOS_DE_UN_ROL(cbbRoles.SelectedValue.ToString());
                 dtgPermisos.AutoGenerateColumns = false;
                 dtgPermisos.DataSource = Permisos;
             }
             catch
             {
-                Permisos = new DataTable();
+
             }
         }
 
@@ -39,7 +42,6 @@ namespace General.GUI
                 cbbRoles.DisplayMember = "Rol";
                 cbbRoles.ValueMember = "IDRol";
                 //
-                cbbRoles.SelectedIndex = 1;
 
             }
             catch
@@ -65,42 +67,45 @@ namespace General.GUI
 
         private void dtgPermisos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String valor;
-
-            try
+            if (oSesion.ComprobarPermiso(10))
             {
-                if(e.ColumnIndex == 0)
+                String valor;
+
+                try
                 {
-                    valor = dtgPermisos.CurrentRow.Cells["IDPermiso"].Value.ToString();
-                    CLS.Permisos Entidad = new CLS.Permisos();
-
-                    if (valor.Equals("0"))
+                    if (e.ColumnIndex == 0)
                     {
-                        //Asignando permiso
-                        Entidad.IDOpcion = dtgPermisos.CurrentRow.Cells["IDOpcion"].Value.ToString();
-                        Entidad.IDRol = cbbRoles.SelectedValue.ToString();
+                        valor = dtgPermisos.CurrentRow.Cells["IDPermiso"].Value.ToString();
+                        CLS.Permisos Entidad = new CLS.Permisos();
 
-                        if (Entidad.Guardar())
+                        if (valor.Equals("0"))
                         {
-                            CargarPermisos();
+                            //Asignando permiso
+                            Entidad.IDOpcion = dtgPermisos.CurrentRow.Cells["IDOpcion"].Value.ToString();
+                            Entidad.IDRol = cbbRoles.SelectedValue.ToString();
+
+                            if (Entidad.Guardar())
+                            {
+                                CargarPermisos();
+                            }
+
+                        }
+                        else
+                        {
+                            //Revocando permiso
+                            Entidad.IDPermiso = dtgPermisos.CurrentRow.Cells["IDPermiso"].Value.ToString();
+                            if (Entidad.Eliminar())
+                            {
+                                CargarPermisos();
+                            }
                         }
 
                     }
-                    else
-                    {
-                        //Revocando permiso
-                        Entidad.IDPermiso = dtgPermisos.CurrentRow.Cells["IDPermiso"].Value.ToString();
-                        if (Entidad.Eliminar())
-                        {
-                            CargarPermisos();
-                        }
-                    }
+                }
+                catch
+                {
 
                 }
-            }
-            catch
-            {
-
             }
         }
     }

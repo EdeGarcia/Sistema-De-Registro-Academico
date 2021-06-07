@@ -14,6 +14,9 @@ namespace Materias.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODAS_LAS_MATERIAS();
@@ -53,61 +56,70 @@ namespace Materias.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(20))
             {
-                MateriasEdicion f = new MateriasEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
+                try
+                {
+                    MateriasEdicion f = new MateriasEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(20))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    MateriasEdicion f = new MateriasEdicion();
-                    f.txbIDMateria.Text = dtgMaterias.CurrentRow.Cells["IDMateria"].Value.ToString();
-                    f.txbNombre.Text = dtgMaterias.CurrentRow.Cells["Nombre"].Value.ToString();
-                    f.txbDescripcion.Text = dtgMaterias.CurrentRow.Cells["Descripcion"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        MateriasEdicion f = new MateriasEdicion();
+                        f.txbIDMateria.Text = dtgMaterias.CurrentRow.Cells["IDMateria"].Value.ToString();
+                        f.txbNombre.Text = dtgMaterias.CurrentRow.Cells["Nombre"].Value.ToString();
+                        f.txbDescripcion.Text = dtgMaterias.CurrentRow.Cells["Descripcion"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(20))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Materias oEntidad = new CLS.Materias();
-                    oEntidad.IDMateria = dtgMaterias.CurrentRow.Cells["IDMateria"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Materias oEntidad = new CLS.Materias();
+                        oEntidad.IDMateria = dtgMaterias.CurrentRow.Cells["IDMateria"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

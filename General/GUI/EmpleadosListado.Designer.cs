@@ -63,7 +63,7 @@
             this.toolStripSeparator3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(602, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(652, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -112,9 +112,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblEmpleados});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 459);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 530);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(602, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(652, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -147,7 +147,7 @@
             this.dtgEmpleados.ReadOnly = true;
             this.dtgEmpleados.RowHeadersVisible = false;
             this.dtgEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEmpleados.Size = new System.Drawing.Size(602, 427);
+            this.dtgEmpleados.Size = new System.Drawing.Size(652, 498);
             this.dtgEmpleados.TabIndex = 2;
             // 
             // IDEmpleado
@@ -188,12 +188,13 @@
             this.DUI.HeaderText = "DUI";
             this.DUI.Name = "DUI";
             this.DUI.ReadOnly = true;
+            this.DUI.Width = 150;
             // 
             // EmpleadosListado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 481);
+            this.ClientSize = new System.Drawing.Size(652, 552);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

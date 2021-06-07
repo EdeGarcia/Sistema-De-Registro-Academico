@@ -73,7 +73,7 @@
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1041, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(1092, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -146,7 +146,7 @@
             this.lblRegistros});
             this.statusStrip1.Location = new System.Drawing.Point(0, 468);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1041, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1092, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -183,7 +183,7 @@
             this.dtgResponsables.ReadOnly = true;
             this.dtgResponsables.RowHeadersVisible = false;
             this.dtgResponsables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgResponsables.Size = new System.Drawing.Size(1041, 436);
+            this.dtgResponsables.Size = new System.Drawing.Size(1092, 436);
             this.dtgResponsables.TabIndex = 2;
             // 
             // ID
@@ -246,6 +246,7 @@
             this.NIT.HeaderText = "NIT";
             this.NIT.Name = "NIT";
             this.NIT.ReadOnly = true;
+            this.NIT.Width = 150;
             // 
             // Telefono
             // 
@@ -258,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 490);
+            this.ClientSize = new System.Drawing.Size(1092, 490);
             this.Controls.Add(this.dtgResponsables);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);

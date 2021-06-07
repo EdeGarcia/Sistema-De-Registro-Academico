@@ -145,7 +145,7 @@ namespace SesionManager.CLS
 
         public Boolean ComprobarPermiso(Int32 pIDOpcion)
         {
-            Boolean Autorizado = true;
+            Boolean Autorizado = false;
             Int32 IDOpcion;
 
             foreach (DataRow Fila in _PERMISOS.Rows)

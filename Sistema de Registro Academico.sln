@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Materias", "Materias\Materi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matriculas", "Matriculas\Matriculas.csproj", "{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notas", "Notas\Notas.csproj", "{1347C30D-0E9A-471B-AE08-930DBD8C312B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informes", "Informes\Informes.csproj", "{08009E3B-ED78-426A-95B7-28F6D9FE59C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F43F3EA-ECC3-45B8-8112-4E10F4CC2396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1347C30D-0E9A-471B-AE08-930DBD8C312B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1347C30D-0E9A-471B-AE08-930DBD8C312B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1347C30D-0E9A-471B-AE08-930DBD8C312B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1347C30D-0E9A-471B-AE08-930DBD8C312B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08009E3B-ED78-426A-95B7-28F6D9FE59C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08009E3B-ED78-426A-95B7-28F6D9FE59C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08009E3B-ED78-426A-95B7-28F6D9FE59C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08009E3B-ED78-426A-95B7-28F6D9FE59C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

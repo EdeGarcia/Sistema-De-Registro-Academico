@@ -14,6 +14,9 @@ namespace Matriculas.GUI
     {
         BindingSource _DATOS = new BindingSource();
 
+        //Permiso
+        SesionManager.CLS.Sesion oSesion = SesionManager.CLS.Sesion.Instancia;
+
         private void Cargar()
         {
             _DATOS.DataSource = CacheManager.CLS.Cache.TODAS_LAS_MATRICULAS();
@@ -43,15 +46,18 @@ namespace Matriculas.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(22))
             {
-                MatriculasEdicion f = new MatriculasEdicion();
-                f.ShowDialog();
-                Cargar();
-            }
-            catch
-            {
+                try
+                {
+                    MatriculasEdicion f = new MatriculasEdicion();
+                    f.ShowDialog();
+                    Cargar();
+                }
+                catch
+                {
 
+                }
             }
         }
 
@@ -67,52 +73,58 @@ namespace Matriculas.GUI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(22))
             {
-                if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    MatriculasEdicion f = new MatriculasEdicion();
-                    f.txbIDMatricula.Text = dtgMatriculas.CurrentRow.Cells["IDMatricula"].Value.ToString();
-                    f.txbIDEstudiante.Text = dtgMatriculas.CurrentRow.Cells["IDEstudiante"].Value.ToString();
-                    f.txbEstudiante.Text = dtgMatriculas.CurrentRow.Cells["Estudiante"].Value.ToString();
-                    //f.cbbGrados.Text = dtgMatriculas.CurrentRow.Cells["Grado"].Value.ToString();
-                    //f.cbbSecciones.Text = dtgMatriculas.CurrentRow.Cells["Secciones"].Value.ToString();
-                    //f.txbTurno.Text = dtgMatriculas.CurrentRow.Cells["Turno"].Value.ToString();
-                    //f.txbCupo.Text = dtgMatriculas.CurrentRow.Cells["Cupo"].Value.ToString();
-                    //f.dtpFechaMatricula.Text = dtgMatriculas.CurrentRow.Cells["FechaMatricula"].Value.ToString();
-                    f.ShowDialog();
-                    Cargar();
+                    if (MessageBox.Show("¿Realmente desea EDITAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        MatriculasEdicion f = new MatriculasEdicion();
+                        f.txbIDMatricula.Text = dtgMatriculas.CurrentRow.Cells["IDMatricula"].Value.ToString();
+                        f.txbIDEstudiante.Text = dtgMatriculas.CurrentRow.Cells["IDEstudiante"].Value.ToString();
+                        f.txbEstudiante.Text = dtgMatriculas.CurrentRow.Cells["Estudiante"].Value.ToString();
+                        //f.cbbGrados.Text = dtgMatriculas.CurrentRow.Cells["Grado"].Value.ToString();
+                        //f.cbbSecciones.Text = dtgMatriculas.CurrentRow.Cells["Secciones"].Value.ToString();
+                        //f.txbTurno.Text = dtgMatriculas.CurrentRow.Cells["Turno"].Value.ToString();
+                        //f.txbCupo.Text = dtgMatriculas.CurrentRow.Cells["Cupo"].Value.ToString();
+                        //f.dtpFechaMatricula.Text = dtgMatriculas.CurrentRow.Cells["FechaMatricula"].Value.ToString();
+                        f.ShowDialog();
+                        Cargar();
+                    }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (oSesion.ComprobarPermiso(22))
             {
-                if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                try
                 {
-                    CLS.Matriculas oEntidad = new CLS.Matriculas();
-                    oEntidad.IDMatricula = dtgMatriculas.CurrentRow.Cells["IDMatricula"].Value.ToString();
+                    if (MessageBox.Show("¿Realmente desea ELIMINAR el registro seleccionado?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        CLS.Matriculas oEntidad = new CLS.Matriculas();
+                        oEntidad.IDMatricula = dtgMatriculas.CurrentRow.Cells["IDMatricula"].Value.ToString();
 
-                    if (oEntidad.Eliminar())
-                    {
-                        MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Cargar();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (oEntidad.Eliminar())
+                        {
+                            MessageBox.Show("Registro eliminado correctamente", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Cargar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Registro no pudo ser eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
-            }
-            catch
-            {
+                catch
+                {
 
+                }
             }
         }
     }

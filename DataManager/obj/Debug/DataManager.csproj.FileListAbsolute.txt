@@ -12,3 +12,10 @@ C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\DataManager\bin\Deb
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\DataManager\obj\Debug\DataManager.dll
 C:\Users\user\3D Objects\NaMaE\Sistema de Registro Academico\DataManager\obj\Debug\DataManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\bin\Debug\DataManager.dll.config
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\bin\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\bin\Debug\DataManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\obj\Debug\DataManager.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\obj\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\DataManager\obj\Debug\DataManager.pdb

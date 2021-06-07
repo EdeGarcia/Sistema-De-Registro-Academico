@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaestrosListado));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.dtgMaestros = new System.Windows.Forms.DataGridView();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSeleccionar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.txbFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblMaestros = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dtgMaestros = new System.Windows.Forms.DataGridView();
             this.IDMaestro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Maestro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,41 +63,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(576, 32);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblMaestros});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 452);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(576, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // dtgMaestros
-            // 
-            this.dtgMaestros.AllowUserToAddRows = false;
-            this.dtgMaestros.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dtgMaestros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgMaestros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgMaestros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgMaestros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dtgMaestros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgMaestros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDMaestro,
-            this.Maestro,
-            this.Titulo,
-            this.DUI});
-            this.dtgMaestros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgMaestros.Location = new System.Drawing.Point(0, 32);
-            this.dtgMaestros.MultiSelect = false;
-            this.dtgMaestros.Name = "dtgMaestros";
-            this.dtgMaestros.ReadOnly = true;
-            this.dtgMaestros.RowHeadersVisible = false;
-            this.dtgMaestros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgMaestros.Size = new System.Drawing.Size(576, 420);
-            this.dtgMaestros.TabIndex = 2;
             // 
             // toolStripSeparator1
             // 
@@ -134,11 +99,46 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(62, 29);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblMaestros});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 452);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(576, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // lblMaestros
             // 
             this.lblMaestros.Name = "lblMaestros";
             this.lblMaestros.Size = new System.Drawing.Size(133, 17);
             this.lblMaestros.Text = "0 Maestros Encontrados";
+            // 
+            // dtgMaestros
+            // 
+            this.dtgMaestros.AllowUserToAddRows = false;
+            this.dtgMaestros.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dtgMaestros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgMaestros.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dtgMaestros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgMaestros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dtgMaestros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMaestros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDMaestro,
+            this.Maestro,
+            this.Titulo,
+            this.DUI});
+            this.dtgMaestros.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgMaestros.Location = new System.Drawing.Point(0, 32);
+            this.dtgMaestros.MultiSelect = false;
+            this.dtgMaestros.Name = "dtgMaestros";
+            this.dtgMaestros.ReadOnly = true;
+            this.dtgMaestros.RowHeadersVisible = false;
+            this.dtgMaestros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgMaestros.Size = new System.Drawing.Size(576, 420);
+            this.dtgMaestros.TabIndex = 2;
             // 
             // IDMaestro
             // 
@@ -180,6 +180,7 @@
             this.Controls.Add(this.dtgMaestros);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MaestrosListado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Maestros";

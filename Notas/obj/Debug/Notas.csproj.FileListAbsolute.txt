@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\Notas.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\Notas.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.GUI.NotasGestion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.Properties.Resources.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\obj\Debug\Notas.GUI.NotasEdicion.resources
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\CacheManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\DataManager.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\MySql.Data.dll
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\CacheManager.pdb
+C:\Users\user\Desktop\Sistema-De-Registro-Academico\Notas\bin\Debug\DataManager.pdb
